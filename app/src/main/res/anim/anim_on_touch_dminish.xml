@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:duration="@integer/largen_diminish_duration"
+     android:fillAfter="true"
+    >
+    <scale
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fromXScale="@dimen/from_x_y_touch_event"
+        android:fromYScale="@dimen/from_x_y_touch_event"
+        android:toXScale="@dimen/to_x_y_touch_event"
+        android:toYScale="@dimen/to_x_y_touch_event"
+        />
+</set>

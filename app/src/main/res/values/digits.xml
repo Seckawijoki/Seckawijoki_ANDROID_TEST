@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item format="float" type="dimen" name="from_x_y_touch_event">1.15</item>
+    <item format="float" type="dimen" name="to_x_y_touch_event">1.0</item>
+    <integer name="largen_diminish_duration">200</integer>
+</resources>

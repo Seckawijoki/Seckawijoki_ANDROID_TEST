@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+             android:padding="@dimen/main_activities_btn_padding"
+        android:id="@+id/btn_main"
+        android:textAllCaps="false"
+        android:textSize="@dimen/main_activities_btn_text_size"
+        android:layout_width="@dimen/main_activities_btn_width"
+        android:layout_height="@dimen/main_activities_btn_height">
+</Button>

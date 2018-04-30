@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_height="match_parent">
+    <Button
+        android:text="@string/lifecycle_start_an_activity"
+        android:onClick="startAnActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:text="@string/lifecycle_open_an_alert_dialog"
+        android:onClick="openAnAlertDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:onClick="openADialogFragment"
+        android:text="@string/lifecycle_open_a_dialog_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:onClick="openADialogActivity"
+        android:text="@string/lifecycle_open_a_dialog_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

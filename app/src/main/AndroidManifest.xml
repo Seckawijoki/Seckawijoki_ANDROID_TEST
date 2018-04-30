@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.seckawijoki.android_test">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <!--//地图包、搜索包需要的基础权限-->
+    <!--允许程序打开网络套接字-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许程序设置内置sd卡的写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许程序获取网络状态-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许程序访问WiFi网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序读写手机状态和身份-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyAppTheme">
+        <activity
+            android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.OldTestActivity"
+            android:label="@string/app_name"
+            android:theme="@style/MyAppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.OLD_TEST"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.NavigationViewActivity"
+            android:label="@string/btn_navigation_view_activity"
+            android:theme="@style/MyAppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.NAVIGATION_VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.TouchForLargeningActivity"
+            android:label="@string/btn_touch_for_largening_activity"
+            android:theme="@style/MyAppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.TOUCH_FOR_LARGENING"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.DateGroupedActivity"
+            android:label="@string/btn_date_grouped_activity"
+            android:theme="@style/MyAppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.DATE_GROUPED"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MyServiceTestActivity"
+            android:label="@string/btn_date_grouped_activity"
+            android:theme="@style/MyAppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.MY_SERVICE_TEST"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.WhetherInUiThreadActivity">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.WHETHER_IN_UI_THREAD"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LifecycleActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/btn_lifecycle_activity">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.LIFECYCLE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.AnActivity"
+            android:label="@string/btn_lifecycle_activity">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.AN_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ADialogActivity"
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:label="@string/btn_lifecycle_activity">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.A_DIALOG_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.DispatchTestActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.DISPATCH_TEST"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.AmapTestActivity">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.AMAP_TEST"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.SocketProgrammingActivity">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.SOCKET_PROGRAMMING"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".activities.OldTestActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.seckawijoki.android_test.activities.OldTestActivity"/>
+        </activity>
+
+        <service android:name=".services.MyTestingService"/>
+        <service
+            android:name=".services.MyRemoteService"
+            android:process=":remote"/>
+        <service
+            android:name=".services.WhetherIntentService"
+            android:exported="false"/>
+
+        <receiver
+            android:name=".receiver.WhetherReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.receiver.WHETHER_IN_UI_THREAD" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".content_provider.WhetherContentProvider"
+            android:authorities="com.seckawijoki.android_test.content_provider"
+            android:enabled="true"
+            android:exported="false"/>
+        <!-- 这个标签开判断我们生成的patch的.apk文件中的tinker_id_XXX
+        与我们的版本号tinker_id_XXX比较。相同合法，不同则不会进行更新 -->
+        <meta-data
+            android:name="TINKER_ID"
+            android:value="tinker_id_19940208"/>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="50b947a298947e4ef9a91db92feee0ec"/>
+    </application>
+
+</manifest>
