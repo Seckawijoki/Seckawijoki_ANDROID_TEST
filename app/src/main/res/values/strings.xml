@@ -47,4 +47,9 @@
     <string name="animator_test_play_together_test">playTogether</string>
     <string name="animator_test_play_builder_test">play Builder</string>
 
+    <!-- LaunchModeActivity -->
+    <string name="launch_mode_start_standard_launch_mode_activity">Standard</string>
+    <string name="launch_mode_start_singletop_launch_mode_activity">Singletop</string>
+    <string name="launch_mode_start_single_task_launch_mode_activity">SingleTask</string>
+    <string name="launch_mode_start_single_instance_launch_mode_activity">SingleInstance</string>
 </resources>

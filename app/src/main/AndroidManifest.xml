@@ -28,7 +28,7 @@
         android:supportsRtl="true"
         android:theme="@style/MyAppTheme">
         <activity
-            android:launchMode="singleInstance"
+            android:launchMode="singleTask"
             android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -149,6 +149,43 @@
         <activity android:name=".activities.AnimatorTestActivity">
             <intent-filter>
                 <action android:name="com.seckawijoki.android_test.ANIMATOR_TEST"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/launch_mode_start_standard_launch_mode_activity"
+            android:name=".activities.StandardLaunchModeActivity"
+            android:launchMode="standard">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.LAUNCH_MODE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/launch_mode_start_singletop_launch_mode_activity"
+            android:name=".activities.SingletopLaunchModeActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/launch_mode_start_single_task_launch_mode_activity"
+            android:name=".activities.SingleTaskLaunchModeActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/launch_mode_start_single_instance_launch_mode_activity"
+            android:name=".activities.SingleInstanceLaunchModeActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>

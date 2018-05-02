@@ -43,6 +43,9 @@ public final class MainAdapter
       case Activities.ANIMATOR_TEST:
         mActivity.startActivity(new Intent(IntentActions.ANIMATOR_TEST));
         break;
+      case Activities.LAUNCH_MODE:
+        mActivity.startActivity(new Intent(IntentActions.LAUNCH_MODE));
+        break;
     }
   }
 
@@ -54,7 +57,8 @@ public final class MainAdapter
     int AMAP_TEST = 4;
     int SOCKET_PROGRAMMING = 5;
     int ANIMATOR_TEST = 6;
-    int count = 7;
+    int LAUNCH_MODE = 7;
+    int count = 8;
   }
   private Activity mActivity;
   private String[] mNames;
