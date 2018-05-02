@@ -16,4 +16,8 @@
     <dimen name="main_activities_btn_height">@dimen/main_activities_btn_width</dimen>
     <dimen name="main_activities_btn_padding">8dp</dimen>
     <dimen name="main_activities_btn_text_size">16sp</dimen>
+
+    <!-- AnimatorTestActivity -->
+    <dimen name="animator_test_btn_animated_padding">8dp</dimen>
+
 </resources>

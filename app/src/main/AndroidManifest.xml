@@ -28,6 +28,7 @@
         android:supportsRtl="true"
         android:theme="@style/MyAppTheme">
         <activity
+            android:launchMode="singleInstance"
             android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -141,6 +142,13 @@
         <activity android:name=".activities.SocketProgrammingActivity">
             <intent-filter>
                 <action android:name="com.seckawijoki.android_test.SOCKET_PROGRAMMING"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.AnimatorTestActivity">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.ANIMATOR_TEST"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>

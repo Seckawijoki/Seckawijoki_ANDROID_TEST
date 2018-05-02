@@ -36,4 +36,15 @@
     <!-- ADialog-->
     <string name="a_dialog_this_is_a_dialog">this is a dialog fragment</string>
 
+    <!-- AnimatorTestActivity -->
+    <string name="animator_test_of_int_animator">ofInt</string>
+    <string name="animator_test_of_object_animator">ofObject</string>
+    <string name="animator_test_argb_evaluator">ArgbEvaluator</string>
+    <string name="animator_test_object_animator">ObjectAnimator</string>
+    <string name="animator_test_property_values_holder_test">PropertyValuesHolder</string>
+    <string name="animator_test_keyframe_test">Keyframe</string>
+    <string name="animator_test_of_object_keyframe_test">Keyframe#ofObject</string>
+    <string name="animator_test_play_together_test">playTogether</string>
+    <string name="animator_test_play_builder_test">play Builder</string>
+
 </resources>
