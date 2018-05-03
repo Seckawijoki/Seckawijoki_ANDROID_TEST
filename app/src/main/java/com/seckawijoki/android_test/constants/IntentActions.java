@@ -18,4 +18,6 @@ public interface IntentActions {
   String DISPATCH_TEST = BASE + "DISPATCH_TEST";
   String AMAP_TEST = BASE + "AMAP_TEST";
   String SOCKET_PROGRAMMING = BASE + "SOCKET_PROGRAMMING";
+  String ANIMATOR_TEST = BASE + "ANIMATOR_TEST";
+  String LAUNCH_MODE = BASE + "LAUNCH_MODE";
 }

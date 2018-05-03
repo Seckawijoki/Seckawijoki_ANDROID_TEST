@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/layout_animator_test_animator_button_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_play_builder_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="playBuilder"
+                android:text="@string/animator_test_play_builder_test" />
+
+            <Button
+                android:id="@+id/btn_play_together_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="playTogether"
+                android:text="@string/animator_test_play_together_test" />
+
+            <Button
+                android:id="@+id/btn_of_object_keyframe_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="keyframeOfObject"
+                android:text="@string/animator_test_of_object_keyframe_test" />
+
+            <Button
+                android:id="@+id/btn_keyframe_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="keyframe"
+                android:text="@string/animator_test_keyframe_test" />
+
+            <Button
+                android:id="@+id/btn_property_values_holder_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="propertyValuesHolder"
+                android:text="@string/animator_test_property_values_holder_test" />
+
+            <Button
+                android:id="@+id/btn_object_animator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="objectAnimator"
+                android:text="@string/animator_test_object_animator" />
+
+            <Button
+                android:id="@+id/btn_of_object_value_animator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ofObject"
+                android:text="@string/animator_test_of_object_animator" />
+
+            <Button
+                android:id="@+id/btn_argb_evaluator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="argbEvaluator"
+                android:text="@string/animator_test_argb_evaluator" />
+
+            <Button
+                android:id="@+id/btn_of_int_value_animator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ofInt"
+                android:text="@string/animator_test_of_int_animator" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layout_animator_test_animated_district"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.seckawijoki.android_test.views.MyTestView
+            android:id="@+id/btn_animated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/animator_test_btn_animated_padding"
+            android:text="@string/app_name"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</LinearLayout>

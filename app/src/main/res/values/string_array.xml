@@ -5,6 +5,9 @@
         <item>WhetherInUiThread</item>
         <item>Lifecycle</item>
         <item>高德地图API demo</item>
+        <item>Socket编程</item>
+        <item>Animator Test</item>
+        <item>Activity LaunchMode Test</item>
     </string-array>
 
 

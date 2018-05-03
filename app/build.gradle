@@ -6,7 +6,7 @@ android {
     buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.seckawijoki.android_test"
-        minSdkVersion 18
+        minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
         versionName "1.0.0"
@@ -38,7 +38,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support.constraint:constraint-layout:1.1.0'
     androidTestCompile 'junit:junit:4.12'
     compile 'com.xiaoleilu:hutool-all:3.0.9'
     //注解库 用于生成application类 provided编译不打包
@@ -51,4 +51,6 @@ dependencies {
     //tinker's main Android lib
     //    compile('com.tencent.tinker:tinker-android-lib:1.9.1')
     compile files('libs/Android_Map3D_SDK_V6.1.0_20180330.jar')
+//    compile 'com.jakewharton:butterknife:8.8.1'
+//    compile 'com.jakewharton:butterknife-compiler:8.8.1'
 }

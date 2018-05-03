@@ -40,6 +40,12 @@ public final class MainAdapter
       case Activities.SOCKET_PROGRAMMING:
         mActivity.startActivity(new Intent(IntentActions.SOCKET_PROGRAMMING));
         break;
+      case Activities.ANIMATOR_TEST:
+        mActivity.startActivity(new Intent(IntentActions.ANIMATOR_TEST));
+        break;
+      case Activities.LAUNCH_MODE:
+        mActivity.startActivity(new Intent(IntentActions.LAUNCH_MODE));
+        break;
     }
   }
 
@@ -50,7 +56,9 @@ public final class MainAdapter
     int LIFECYCLE = 3;
     int AMAP_TEST = 4;
     int SOCKET_PROGRAMMING = 5;
-    int count = 6;
+    int ANIMATOR_TEST = 6;
+    int LAUNCH_MODE = 7;
+    int count = 8;
   }
   private Activity mActivity;
   private String[] mNames;
