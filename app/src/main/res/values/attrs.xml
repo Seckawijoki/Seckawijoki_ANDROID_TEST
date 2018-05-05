@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyEditText">
+        <attr name="TitleText" format="string"/>
+        <attr name="TitleTextColor" format="color"/>
+        <attr name="TitleTextSize" format="dimension"/>
+        <attr name="EditHint" format="string"/>
+        <attr name="EditTextColor" format="color"/>
+        <attr name="EditTextSize" format="dimension"/>
+        <attr name="ClearButton" format="reference"/>
+        <attr name="SingleLine" format="boolean"/>
+    </declare-styleable>
+</resources>
