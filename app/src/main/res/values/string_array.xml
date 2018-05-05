@@ -1,8 +1,8 @@
 <resources>
-    <string-array name="main_activity_names">
+    <string-array name="array_main_activity_names">
         <item>OldTest</item>
         <item>MyServiceTest</item>
-        <item>WhetherInUiThread</item>
+        <item>Whether in UI Thread</item>
         <item>Lifecycle</item>
         <item>高德地图API demo</item>
         <item>Socket编程</item>

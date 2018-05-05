@@ -36,6 +36,10 @@
     <!-- ADialog-->
     <string name="a_dialog_this_is_a_dialog">this is a dialog fragment</string>
 
+    <!-- SocketProgrammingActivity -->
+    <string name="socket_programming_data_to_send">发送数据：</string>
+    <string name="socket_programming_data_to_receive">接收数据：</string>
+
     <!-- AnimatorTestActivity -->
     <string name="animator_test_of_int_animator">ofInt</string>
     <string name="animator_test_of_object_animator">ofObject</string>
@@ -52,4 +56,9 @@
     <string name="launch_mode_start_singletop_launch_mode_activity">Singletop</string>
     <string name="launch_mode_start_single_task_launch_mode_activity">SingleTask</string>
     <string name="launch_mode_start_single_instance_launch_mode_activity">SingleInstance</string>
+    <string name="launch_mode_start_dialog_activity">DialogActivity</string>
+
+    <!-- MyEditText -->
+    <string name="my_edit_text_clear">清除</string>
+    <string name="my_edit_text_hint">输入内容</string>
 </resources>
