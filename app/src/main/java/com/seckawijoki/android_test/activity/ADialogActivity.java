@@ -8,7 +8,7 @@ import com.seckawijoki.android_test.base.AbsLifecycleLogActivity;
 
 public class ADialogActivity extends AbsLifecycleLogActivity {
   @Override
-  public String getTAG() {
+  public String setTag() {
     return "LifecycleDialogActivity";
   }
 }

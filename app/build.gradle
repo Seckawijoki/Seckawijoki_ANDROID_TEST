@@ -13,16 +13,37 @@ android {
         // Specifies a flavor dimension.
         flavorDimensions "demo"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            moduleName = "androidTest"
+        }
+        // for detailed abiFilter descriptions, refer to "Supported ABIs" @
+        // https://developer.android.com/ndk/guides/abis.html#sa
+//        create("arm") {            ndk.abiFilters.add("armeabi")        }
+//        create("arm7") {            ndk.abiFilters.add("armeabi-v7a")        }
+//        create("arm8") {            ndk.abiFilters.add("arm64-v8a")        }
+//        create("x86") {            ndk.abiFilters.add("x86")        }
+//        create("x86-64") {            ndk.abiFilters.add("x86_64")        }
+//        create("mips") {            ndk.abiFilters.add("mips")        }
+//        create("mips-64") {            ndk.abiFilters.add("mips64")        }
+        // To include all cpu architectures, leaves abiFilters empty
+//        create("all")
     }
     productFlavors {
         demo {
             dimension "demo"
             versionName "1.0.0-androidTest"
         }
+
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
     }
     buildTypes {
         release {
             minifyEnabled false
+            multiDexEnabled = true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -30,37 +51,38 @@ android {
         cruncherEnabled = false
         useNewCruncher = false
     }
-    repositories{
-        maven{
+    repositories {
+        maven {
             url 'https://jitpack.io'
         }
     }
 }
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:design:26.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.1.0'
-    androidTestCompile 'junit:junit:4.12'
-    compile 'com.xiaoleilu:hutool-all:3.0.9'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    androidTestImplementation 'junit:junit:4.12'
+    implementation 'com.xiaoleilu:hutool-all:3.0.9'
     //注解库 用于生成application类 provided编译不打包
-//    provided('com.tencent.tinker:tinker-android-anno:1.7.7') { changing = true }
+    //    compileOnly ('com.tencent.tinker:tinker-android-anno:1.7.7') { changing = true }
     //是否将依赖关系标记为正在改变
     //tinker的核心库 compile编译并打包
-//    compile('com.tencent.tinker:tinker-android-lib:1.7.7') { changing = true }
+    //    implementation ('com.tencent.tinker:tinker-android-lib:1.7.7') { changing = true }
     //optional, help to generate the final application
-    //    provided('com.tencent.tinker:tinker-android-anno:1.9.1')
+    //    compileOnly ('com.tencent.tinker:tinker-android-anno:1.9.1')
     //tinker's main Android lib
-    //    compile('com.tencent.tinker:tinker-android-lib:1.9.1')
-    compile files('libs/Android_Map3D_SDK_V6.1.0_20180330.jar')
-//    compile 'com.jakewharton:butterknife:8.8.1'
-//    compile 'com.jakewharton:butterknife-compiler:8.8.1'
-//    implementation 'com.jakewharton:butterknife:8.8.1'
-//    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-
-    compile 'com.github.Seckawijoki:ProgressingBar:1.0'
-    compile 'com.github.Seckawijoki:ScoreSectorView:1.0'
+    //    implementation ('com.tencent.tinker:tinker-android-lib:1.9.1')
+    implementation files('libs/Android_Map3D_SDK_V6.1.0_20180330.jar')
+    //    compile 'com.jakewharton:butterknife:8.8.1'
+    //    compile 'com.jakewharton:butterknife-compiler:8.8.1'
+    //    implementation 'com.jakewharton:butterknife:8.8.1'
+    //    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.github.Seckawijoki:ProgressingBar:1.0'
+    implementation 'com.github.Seckawijoki:ScoreSectorView:1.0'
+    implementation files('libs/BRecorder.jar')
+    implementation 'com.android.support:cardview-v7:26.1.0'
 }

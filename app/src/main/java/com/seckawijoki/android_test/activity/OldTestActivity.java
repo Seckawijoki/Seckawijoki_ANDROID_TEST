@@ -41,7 +41,7 @@ public class OldTestActivity extends AppCompatActivity implements View.OnClickLi
 
       RecyclerView rv = findViewById(R.id.rv_recycler_button_test);
       new RecyclerButton.Builder(this)
-              .setColumn(3)
+              .setVertical(3)
               .setRecyclerView(rv)
               .setTitleRes(R.array.array_main_activity_names)
               .setOnRecyclerButtonClickListener(new RecyclerButton.OnRecyclerButtonClickListener() {

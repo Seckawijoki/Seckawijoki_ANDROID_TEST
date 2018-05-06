@@ -38,7 +38,9 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
     new RecyclerButton.Builder(getActivity())
             .setTitleRes(R.array.array_main_activity_names)
             .setRecyclerView(rv)
-            .setColumn(3)
+            .setWidth(120)
+            .setHeight(120)
+            .setVertical(3)
             .setOnRecyclerButtonClickListener(this)
             .build();
   }
@@ -62,14 +64,20 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
       case Activities.AMAP_TEST:
         startActivity(new Intent(IntentActions.AMAP_TEST));
         break;
-      case Activities.SOCKET_PROGRAMMING:
-        startActivity(new Intent(IntentActions.SOCKET_PROGRAMMING));
-        break;
       case Activities.ANIMATOR_TEST:
         startActivity(new Intent(IntentActions.ANIMATOR_TEST));
         break;
       case Activities.LAUNCH_MODE:
         startActivity(new Intent(IntentActions.LAUNCH_MODE));
+        break;
+        case Activities.COLLAPSING_TOOLBAR:
+          startActivity(new Intent(IntentActions.COLLAPSING_TOOLBAR));
+          break;
+      case Activities.SOCKET_PROGRAMMING:
+//        startActivity(new Intent(IntentActions.SOCKET_PROGRAMMING));
+        break;
+      case Activities.BAIDU_PUSH_FLOW:
+//        startActivity(new Intent(IntentActions.BAIDU_PUSH_FLOW));
         break;
     }
   }
@@ -80,8 +88,10 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
     int WHETHER_IN_UI_THREAD = 2;
     int LIFECYCLE = 3;
     int AMAP_TEST = 4;
-    int SOCKET_PROGRAMMING = 5;
-    int ANIMATOR_TEST = 6;
-    int LAUNCH_MODE = 7;
+    int ANIMATOR_TEST = 5;
+    int LAUNCH_MODE = 6;
+    int COLLAPSING_TOOLBAR = 7;
+    int SOCKET_PROGRAMMING = 98;
+    int BAIDU_PUSH_FLOW = 99;
   }
 }

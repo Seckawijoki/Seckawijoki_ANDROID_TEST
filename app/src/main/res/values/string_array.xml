@@ -5,9 +5,30 @@
         <item>Whether in UI Thread</item>
         <item>Lifecycle</item>
         <item>高德地图API demo</item>
-        <item>Socket编程</item>
         <item>Animator Test</item>
         <item>Activity LaunchMode Test</item>
+        <item>CollapsingToolbarLayout</item>
+        <!--<item>Socket编程</item>-->
+        <!--<item>百度推流SDK</item>-->
+    </string-array>
+
+    <string-array name="array_lifecycle_operate_activity">
+        <item>start an activity</item>
+        <item>start an activity for result</item>
+        <item>open a dialog activity</item>
+        <item>open an alert dialog</item>
+        <item>open a dialog fragment</item>
+    </string-array>
+
+    <string-array name="array_lifecycle_operate_fragment">
+        <item>getSupportFragmentManager</item>
+        <item>beginTransaction</item>
+        <item>add</item>
+        <item>remove</item>
+        <item>show</item>
+        <item>hide</item>
+        <item>replace</item>
+        <item>commit</item>
     </string-array>
 
 

@@ -17,12 +17,12 @@ import com.seckawijoki.android_test.R;
  * Created by 瑶琴频曲羽衣魂 on 2018/4/20 at 16:15.
  */
 
-public class ADialog extends DialogFragment {
+public class ADialogFragment extends DialogFragment {
   private static final String TAG = "LifecycleDialog";
 
-  public static ADialog newInstance() {
+  public static ADialogFragment newInstance() {
     Bundle args = new Bundle();
-    ADialog fragment = new ADialog();
+    ADialogFragment fragment = new ADialogFragment();
     fragment.setArguments(args);
     return fragment;
   }

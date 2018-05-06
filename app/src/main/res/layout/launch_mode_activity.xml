@@ -3,31 +3,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
-    <Button
-        android:id="@+id/btn_start_standard_launch_mode_activity"
-        android:text="@string/launch_mode_start_standard_launch_mode_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/btn_start_singletop_launch_mode_activity"
-        android:text="@string/launch_mode_start_singletop_launch_mode_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/btn_start_single_task_launch_mode_activity"
-        android:text="@string/launch_mode_start_single_task_launch_mode_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/btn_start_single_instance_launch_mode_activity"
-        android:text="@string/launch_mode_start_single_instance_launch_mode_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/btn_start_dialog_activity"
-        android:text="@string/launch_mode_start_dialog_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <include layout="@layout/launch_mode_fragment"/>
     <TextView
         android:id="@+id/tv_launch_mode_activity"
         android:text="@string/app_name"
@@ -35,5 +11,9 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@+id/fragment_launch_mode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>
