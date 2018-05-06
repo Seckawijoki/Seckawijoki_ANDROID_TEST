@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <include layout="@layout/launch_mode_fragment"/>
+    <TextView
+        android:id="@+id/tv_launch_mode_activity"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@+id/fragment_launch_mode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

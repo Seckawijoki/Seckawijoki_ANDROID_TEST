@@ -28,13 +28,15 @@
     <string name="main_goto_old_test_activity">OldTestActivity</string>
     
     <!-- LifecycleActivity -->
-    <string name="lifecycle_start_an_activity">start an activity</string>
-    <string name="lifecycle_open_an_alert_dialog">open an alert dialog</string>
-    <string name="lifecycle_open_a_dialog_fragment">open a dialog fragment</string>
-    <string name="lifecycle_open_a_dialog_activity">open a dialog activity</string>
+    <string name="lifecycle_dialog_title">DialogTitle</string>
+    <string name="lifecycle_dialog_content">DialogContent</string>
 
-    <!-- ADialog-->
+    <!-- ADialogFragment-->
     <string name="a_dialog_this_is_a_dialog">this is a dialog fragment</string>
+
+    <!-- SocketProgrammingActivity -->
+    <string name="socket_programming_data_to_send">发送数据：</string>
+    <string name="socket_programming_data_to_receive">接收数据：</string>
 
     <!-- AnimatorTestActivity -->
     <string name="animator_test_of_int_animator">ofInt</string>
@@ -52,4 +54,9 @@
     <string name="launch_mode_start_singletop_launch_mode_activity">Singletop</string>
     <string name="launch_mode_start_single_task_launch_mode_activity">SingleTask</string>
     <string name="launch_mode_start_single_instance_launch_mode_activity">SingleInstance</string>
+    <string name="launch_mode_start_dialog_activity">DialogActivity</string>
+
+    <!-- MyEditText -->
+    <string name="my_edit_text_clear">清除</string>
+    <string name="my_edit_text_hint">输入内容</string>
 </resources>
