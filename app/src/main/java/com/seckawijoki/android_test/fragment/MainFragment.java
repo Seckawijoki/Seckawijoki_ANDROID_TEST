@@ -45,10 +45,19 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
             .build();
   }
 
+  private void startActivity(String action) {
+    startActivity(new Intent(action));
+  }
+
   @Override
   public void onClick(int position) {
-    switch ( position ){
-      default:
+    switch (position) {
+      case Activities.SOCKET_PROGRAMMING:
+//        startActivity(new Intent(IntentActions.SOCKET_PROGRAMMING));
+        break;
+      case Activities.BAIDU_PUSH_FLOW:
+//        startActivity(new Intent(IntentActions.BAIDU_PUSH_FLOW));
+        break;
       case Activities.OLD_TEST:
         startActivity(new Intent(IntentActions.OLD_TEST));
         break;
@@ -67,17 +76,15 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
       case Activities.ANIMATOR_TEST:
         startActivity(new Intent(IntentActions.ANIMATOR_TEST));
         break;
+      default:
       case Activities.LAUNCH_MODE:
         startActivity(new Intent(IntentActions.LAUNCH_MODE));
         break;
-        case Activities.COLLAPSING_TOOLBAR:
-          startActivity(new Intent(IntentActions.COLLAPSING_TOOLBAR));
-          break;
-      case Activities.SOCKET_PROGRAMMING:
-//        startActivity(new Intent(IntentActions.SOCKET_PROGRAMMING));
+      case Activities.COLLAPSING_TOOLBAR:
+        startActivity(new Intent(IntentActions.COLLAPSING_TOOLBAR));
         break;
-      case Activities.BAIDU_PUSH_FLOW:
-//        startActivity(new Intent(IntentActions.BAIDU_PUSH_FLOW));
+      case Activities.SINGLE_CHOICE_RECYCLER_VIEW:
+        startActivity(IntentActions.SINGLE_CHOICE_RECYCLER_VIEW);
         break;
     }
   }
@@ -91,6 +98,7 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
     int ANIMATOR_TEST = 5;
     int LAUNCH_MODE = 6;
     int COLLAPSING_TOOLBAR = 7;
+    int SINGLE_CHOICE_RECYCLER_VIEW = 8;
     int SOCKET_PROGRAMMING = 98;
     int BAIDU_PUSH_FLOW = 99;
   }
