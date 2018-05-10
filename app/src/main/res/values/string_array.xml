@@ -8,6 +8,7 @@
         <item>Animator Test</item>
         <item>Activity LaunchMode Test</item>
         <item>CollapsingToolbarLayout</item>
+        <item>SingleChoiceRecyclerView</item>
         <!--<item>Socket编程</item>-->
         <!--<item>百度推流SDK</item>-->
     </string-array>

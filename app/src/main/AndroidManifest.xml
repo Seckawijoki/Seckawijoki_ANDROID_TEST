@@ -215,6 +215,13 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:name=".activity.SingleChoiceRecyclerViewActivity">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.SINGLE_CHOICE_RECYCLER_VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".activity.LoginActivity"

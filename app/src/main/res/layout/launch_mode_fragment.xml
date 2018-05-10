@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn_start_standard_launch_mode_activity"
+        android:text="@string/launch_mode_start_standard_launch_mode_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_start_singletop_launch_mode_activity"
+        android:text="@string/launch_mode_start_singletop_launch_mode_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_start_single_task_launch_mode_activity"
+        android:text="@string/launch_mode_start_single_task_launch_mode_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_start_single_instance_launch_mode_activity"
+        android:text="@string/launch_mode_start_single_instance_launch_mode_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_start_dialog_activity"
+        android:text="@string/launch_mode_start_dialog_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
