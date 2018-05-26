@@ -29,6 +29,11 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <!-- 申明录音权限 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!--解决Exported service does not require permission警告-->
+    <permission
+        android:protectionLevel="normal"
+        android:name="@string/common_service_permission_name" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -44,6 +49,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.seckawijoki.android_test.activity.OldTestActivity"/>
         </activity>
         <activity
             android:name=".activity.OldTestActivity"
@@ -222,25 +234,52 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".activity.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:parentActivityName=".activity.OldTestActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.seckawijoki.android_test.activity.OldTestActivity"/>
-        </activity>
         <activity android:name=".mvp_example.MvpActivity" />
+        <activity android:name=".activity.IntercommunicationActivity">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.INTERCOMMUNICATION"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <!-- Services -->
 
         <service android:name=".service.MyTestingService"/>
         <service
-            android:name=".service.MyRemoteService"
-            android:process=":remote"/>
+            android:permission="@string/common_component_permission_name"
+            android:name=".service.SomeRemoteService"
+            android:exported="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.service.SOME_REMOTE_SERVICE"/>
+            </intent-filter>
+        </service>
         <service
             android:name=".service.WhetherIntentService"
             android:exported="false"/>
+        <service android:name=".service.LifecycleService" />
+        <service android:name=".service.IntercommunicationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.service.INTERCOMMUNICATION"/>
+            </intent-filter>
+        </service>
+        <service
+            android:permission="@string/common_component_permission_name"
+            android:exported="true"
+            android:enabled="true"
+            android:name=".service.MessengerIntercommunicationService">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.service.MESSENGER_INTERCOMMUNICATION"/>
 
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
+        <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <!--BroadcastReceivers-->
         <receiver
             android:name=".receiver.WhetherReceiver"
             android:enabled="true"
@@ -249,14 +288,30 @@
                 <action android:name="com.seckawijoki.android_test.receiver.WHETHER_IN_UI_THREAD" />
             </intent-filter>
         </receiver>
+        <receiver
+            android:permission="@string/common_component_permission_name"
+            android:enabled="true"
+            android:exported="true"
+            android:name=".receiver.IntercommunicationReceiver">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.receiver.INTERCOMMUNICATION"/>
 
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+
+
+        <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <!--ContentProviders-->
         <provider
-            android:name=".content_provider.WhetherContentProvider"
-            android:authorities="com.seckawijoki.android_test.content_provider"
+            android:name=".provider.WhetherContentProvider"
+            android:authorities="com.seckawijoki.android_test.provider"
             android:enabled="true"
             android:exported="false"/>
         <!-- 这个标签开判断我们生成的patch的.apk文件中的tinker_id_XXX
         与我们的版本号tinker_id_XXX比较。相同合法，不同则不会进行更新 -->
+
+        <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
         <meta-data
             android:name="TINKER_ID"
             android:value="tinker_id_19940208"/>

@@ -1,7 +1,4 @@
 package com.seckawijoki.android_test.adapter;
-/**
- * Created by 瑶琴频曲羽衣魂 on 2018/3/8 at 20:23.
- */
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,6 +13,10 @@ import com.seckawijoki.android_test.constant.IntentActions;
 import com.seckawijoki.android_test.fragment.MainFragment;
 import com.seckawijoki.android_test.listener.OnMainActivitiesListener;
 
+/**
+ * Created by 瑶琴频曲羽衣魂 on 2018/3/8 at 20:23.
+ */
+@Deprecated
 public final class MainAdapter
         extends RecyclerView.Adapter<MainAdapter.ViewHolder>
         implements OnMainActivitiesListener{
@@ -66,12 +67,7 @@ public final class MainAdapter
   public void onBindViewHolder(ViewHolder holder, final int position) {
     final int p = position;
     holder.btn.setText(mNames[position]);
-    holder.btn.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        onMainActivitiesClick(p);
-      }
-    });
+    holder.btn.setOnClickListener(v -> onMainActivitiesClick(p));
   }
 
   @Override
@@ -83,7 +79,7 @@ public final class MainAdapter
     Button btn;
     ViewHolder(View view) {
       super(view);
-      btn = (Button) view.findViewById(R.id.btn_main);
+      btn = view.findViewById(R.id.btn_main);
     }
   }
 }

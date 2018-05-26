@@ -9,6 +9,7 @@
         <item>Activity LaunchMode Test</item>
         <item>CollapsingToolbarLayout</item>
         <item>SingleChoiceRecyclerView</item>
+        <item>Activity与Service通信</item>
         <!--<item>Socket编程</item>-->
         <!--<item>百度推流SDK</item>-->
     </string-array>
@@ -30,6 +31,13 @@
         <item>hide</item>
         <item>replace</item>
         <item>commit</item>
+    </string-array>
+
+    <string-array name="array_my_service_test_operate_service">
+        <item>startService</item>
+        <item>stopService</item>
+        <item>bindService</item>
+        <item>unbindService</item>
     </string-array>
 
 

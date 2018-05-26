@@ -1,7 +1,4 @@
 package com.seckawijoki.android_test.fragment;
-/**
- * Created by 瑶琴频曲羽衣魂 on 2018/3/11 at 16:25.
- */
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +13,9 @@ import com.seckawijoki.android_test.R;
 import com.seckawijoki.android_test.base.RecyclerButton;
 import com.seckawijoki.android_test.constant.IntentActions;
 
+/**
+ * Created by 瑶琴频曲羽衣魂 on 2018/3/11 at 16:25.
+ */
 public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerButtonClickListener {
   public static MainFragment newInstance() {
     Bundle args = new Bundle();
@@ -32,9 +32,9 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
   }
 
   @Override
-  public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-    super.onActivityCreated(savedInstanceState);
-    RecyclerView rv = getView().findViewById(R.id.recycler_view_main);
+  public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    super.onViewCreated(view, savedInstanceState);
+    RecyclerView rv = view.findViewById(R.id.recycler_view_main);
     new RecyclerButton.Builder(getActivity())
             .setTitleRes(R.array.array_main_activity_names)
             .setRecyclerView(rv)
@@ -43,6 +43,12 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
             .setVertical(3)
             .setOnRecyclerButtonClickListener(this)
             .build();
+  }
+
+  @Override
+  public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+    super.onActivityCreated(savedInstanceState);
+
   }
 
   private void startActivity(String action) {
@@ -86,6 +92,9 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
       case Activities.SINGLE_CHOICE_RECYCLER_VIEW:
         startActivity(IntentActions.SINGLE_CHOICE_RECYCLER_VIEW);
         break;
+      case Activities.COMMUNICATION_BETWEEN_ACTIVITY_AND_SERVICE:
+        startActivity(IntentActions.INTERCOMMUNICATION);
+        break;
     }
   }
 
@@ -99,6 +108,7 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
     int LAUNCH_MODE = 6;
     int COLLAPSING_TOOLBAR = 7;
     int SINGLE_CHOICE_RECYCLER_VIEW = 8;
+    int COMMUNICATION_BETWEEN_ACTIVITY_AND_SERVICE = 9;
     int SOCKET_PROGRAMMING = 98;
     int BAIDU_PUSH_FLOW = 99;
   }

@@ -1,9 +1,10 @@
-package com.seckawijoki.android_test.content_provider;
+package com.seckawijoki.android_test.provider;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 /**
@@ -17,17 +18,17 @@ public class WhetherContentProvider extends ContentProvider {
   }
 
   @Override
-  public int delete(Uri uri, String selection, String[] selectionArgs) {
+  public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
     return -1;
   }
 
   @Override
-  public String getType(Uri uri) {
+  public String getType(@NonNull Uri uri) {
     return "plain/text";
   }
 
   @Override
-  public Uri insert(Uri uri, ContentValues values) {
+  public Uri insert(@NonNull Uri uri, ContentValues values) {
     return null;
   }
 
@@ -37,14 +38,14 @@ public class WhetherContentProvider extends ContentProvider {
   }
 
   @Override
-  public Cursor query(Uri uri, String[] projection, String selection,
+  public Cursor query(@NonNull Uri uri, String[] projection, String selection,
                       String[] selectionArgs, String sortOrder) {
     Log.i(TAG, "query: Thread ID = " + Thread.currentThread().getId());
     return null;
   }
 
   @Override
-  public int update(Uri uri, ContentValues values, String selection,
+  public int update(@NonNull Uri uri, ContentValues values, String selection,
                     String[] selectionArgs) {
     return -1;
   }

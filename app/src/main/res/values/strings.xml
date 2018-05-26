@@ -3,6 +3,8 @@
     <string name="one">one</string>
     <string name="two">two</string>
 
+    <string name="common_component_permission_name">oem.permission.SENDMAIL</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -55,6 +57,23 @@
     <string name="launch_mode_start_single_task_launch_mode_activity">SingleTask</string>
     <string name="launch_mode_start_single_instance_launch_mode_activity">SingleInstance</string>
     <string name="launch_mode_start_dialog_activity">DialogActivity</string>
+
+    <!-- IntercommunicationActivity -->
+    <string name="intercommunication_bind_service">bindService(?,?,?)</string>
+    <string name="intercommunication_unbind_service">unbindService(?)</string>
+    <string name="intercommunication_communicate_directly">直接通信</string>
+    <string name="intercommunication_start_downloading">startDownloading</string>
+    <string name="intercommunication_stop_downloading">stopDownloading</string>
+    <string name="intercommunication_data_sent_to_service">Data sent to service:</string>
+    <string name="intercommunication_data_received_from_service">Data received from service:</string>
+    <string name="intercommunication_format_percentage">%.2f%%</string>
+    <string name="intercommunication_communicate_via_receiver">通过广播通信</string>
+    <string name="intercommunication_communicate_with_messenger">通过Messenger通信</string>
+    <string name="intercommunication_communicate_via_aidl">通过AIDL通信</string>
+    <string name="intercommunication_bind_remote_service">bind remote service</string>
+    <string name="intercommunication_unbind_remote_service">unbind remote service</string>
+    <string name="intercommunication_start_service_to_download">start service to download</string>
+    <string name="intercommunication_stop_service">stop service</string>
 
     <!-- MyEditText -->
     <string name="my_edit_text_clear">清除</string>
