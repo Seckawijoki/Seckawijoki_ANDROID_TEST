@@ -33,7 +33,7 @@
     <!--解决Exported service does not require permission警告-->
     <permission
         android:protectionLevel="normal"
-        android:name="@string/common_service_permission_name" />
+        android:name="oem.permission.SENDMAIL" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -242,13 +242,20 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:name=".activity.DataBindingTestActivity">
+            <intent-filter>
+                <action android:name="com.seckawijoki.android_test.DATA_BINDING_TEST"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
 
         <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
         <!-- Services -->
 
         <service android:name=".service.MyTestingService"/>
         <service
-            android:permission="@string/common_component_permission_name"
+            android:permission="oem.permission.SENDMAIL"
             android:name=".service.SomeRemoteService"
             android:exported="true"
             android:process=":remote">
@@ -289,7 +296,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:permission="@string/common_component_permission_name"
+            android:permission="oem.permission.SENDMAIL"
             android:enabled="true"
             android:exported="true"
             android:name=".receiver.IntercommunicationReceiver">

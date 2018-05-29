@@ -55,32 +55,29 @@ public class LifecycleActivity extends AbsLifecycleLogActivity {
   }
 
   private RecyclerButton.OnRecyclerButtonClickListener activityOperationListener =
-          new RecyclerButton.OnRecyclerButtonClickListener() {
-            @Override
-            public void onClick(int position) {
-              switch (position) {
-                case 0:
-                  startActivity(new Intent(IntentActions.AN_ACTIVITY));
-                  break;
-                case 1:
-                  startActivityForResult(new Intent(IntentActions.AN_ACTIVITY), 100);
-                  break;
-                case 2:
-                  startActivity(new Intent(IntentActions.A_DIALOG_ACTIVITY));
-                  break;
-                case 3:
-                  AlertDialog alertDialog = new AlertDialog.Builder(LifecycleActivity.this)
-                          .setTitle(R.string.lifecycle_dialog_title)
-                          .setMessage(R.string.lifecycle_dialog_content)
-                          .create();
-                  alertDialog.show();
-                  break;
-                case 4:
-                  ADialogFragment aDialogFragment = ADialogFragment.newInstance();
-                  aDialogFragment.show(getSupportFragmentManager(), null);
-                  break;
+          position -> {
+            switch (position) {
+              case 0:
+                startActivity(new Intent(IntentActions.AN_ACTIVITY));
+                break;
+              case 1:
+                startActivityForResult(new Intent(IntentActions.AN_ACTIVITY), 100);
+                break;
+              case 2:
+                startActivity(new Intent(IntentActions.A_DIALOG_ACTIVITY));
+                break;
+              case 3:
+                AlertDialog alertDialog = new AlertDialog.Builder(LifecycleActivity.this)
+                        .setTitle(R.string.lifecycle_dialog_title)
+                        .setMessage(R.string.lifecycle_dialog_content)
+                        .create();
+                alertDialog.show();
+                break;
+              case 4:
+                ADialogFragment aDialogFragment = ADialogFragment.newInstance();
+                aDialogFragment.show(getSupportFragmentManager(), null);
+                break;
 
-              }
             }
           };
 

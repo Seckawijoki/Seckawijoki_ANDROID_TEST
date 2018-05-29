@@ -6,4 +6,5 @@
         android:textSize="@dimen/main_activities_btn_text_size"
         android:layout_width="@dimen/main_activities_btn_width"
         android:layout_height="@dimen/main_activities_btn_height">
+
 </Button>

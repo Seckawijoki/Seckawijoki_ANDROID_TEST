@@ -95,6 +95,9 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
       case Activities.COMMUNICATION_BETWEEN_ACTIVITY_AND_SERVICE:
         startActivity(IntentActions.INTERCOMMUNICATION);
         break;
+      case Activities.DATA_BINDING_TEST:
+        startActivity(IntentActions.DATA_BINDING_TEST);
+        break;
     }
   }
 
@@ -109,6 +112,7 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
     int COLLAPSING_TOOLBAR = 7;
     int SINGLE_CHOICE_RECYCLER_VIEW = 8;
     int COMMUNICATION_BETWEEN_ACTIVITY_AND_SERVICE = 9;
+    int DATA_BINDING_TEST = 10;
     int SOCKET_PROGRAMMING = 98;
     int BAIDU_PUSH_FLOW = 99;
   }

@@ -47,21 +47,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    aaptOptions {
-        cruncherEnabled = false
-        useNewCruncher = false
-    }
+//    aaptOptions {        cruncherEnabled=false        useNewCruncher=false    }
     repositories {
         maven {
             url 'https://jitpack.io'
         }
     }
-    dexOptions {
-        incremental false
-    }
+//    dexOptions {        incremental false    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding{
+        enabled = true
     }
 }
 dependencies {
