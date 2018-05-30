@@ -6,11 +6,11 @@
         <item>Lifecycle</item>
         <item>高德地图API demo</item>
         <item>Animator Test</item>
-        <item>Activity LaunchMode Test</item>
+        <item>ActivityLaunchModeDemo</item>
         <item>CollapsingToolbarLayout</item>
         <item>SingleChoiceRecyclerView</item>
         <item>Activity与Service通信</item>
-        <item>DataBinding</item>
+        <item>DataBindingDemo</item>
         <!--<item>Socket编程</item>-->
         <!--<item>百度推流SDK</item>-->
     </string-array>

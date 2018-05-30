@@ -42,16 +42,20 @@ public class LifecycleActivity extends AbsLifecycleLogActivity {
     ((TextView) this.findViewById(R.id.tv_lifecycle_object_id)).setText(setTag()+toString());
     new RecyclerButton.Builder(this)
             .setTitleRes(R.array.array_lifecycle_operate_activity)
-            .setRecyclerView((RecyclerView) findViewById(R.id.rv_operate_activity))
+            .setRecyclerView(findViewById(R.id.rv_operate_activity))
             .setVertical(2)
             .setOnRecyclerButtonClickListener(activityOperationListener)
             .build();
     new RecyclerButton.Builder(this)
             .setTitleRes(R.array.array_lifecycle_operate_fragment)
-            .setRecyclerView((RecyclerView) findViewById(R.id.rv_operate_fragment))
+            .setRecyclerView(findViewById(R.id.rv_operate_fragment))
             .setVertical(4)
             .setOnRecyclerButtonClickListener(fragmentOperationListener)
             .build();
+    fragmentManager = getSupportFragmentManager();
+    fragmentTransaction = fragmentManager.beginTransaction();
+    fragmentTransaction.replace(R.id.fragment_lifecycle, fragment);
+    fragmentTransaction.commitNow();
   }
 
   private RecyclerButton.OnRecyclerButtonClickListener activityOperationListener =

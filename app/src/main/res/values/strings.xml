@@ -1,81 +1,97 @@
 <resources>
-    <string name="app_name">ANDROID_TEST</string>
-    <string name="one">one</string>
-    <string name="two">two</string>
+  <string name="app_name">ANDROID_TEST</string>
+  <string name="one">one</string>
+  <string name="two">two</string>
 
-    <string name="common_component_permission_name">oem.permission.SENDMAIL</string>
+  <string name="common_component_permission_name">oem.permission.SENDMAIL</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+  <string name="action_settings">Settings</string>
 
-    <string name="btn_touch_for_largening_activity">TouchForLargeningActivity</string>
-    <string name="btn_navigation_view_activity">NavigationViewActivity</string>
-    <string name="btn_date_grouped_activity">DateGroupedActivity</string>
-    <string name="btn_lifecycle_activity">LifecycleActivity</string>
-    <string name="title_activity_login">Sign in</string>
+  <string name="btn_touch_for_largening_activity">TouchForLargeningActivity</string>
+  <string name="btn_navigation_view_activity">NavigationViewActivity</string>
+  <string name="btn_date_grouped_activity">DateGroupedActivity</string>
+  <string name="btn_lifecycle_activity">LifecycleActivity</string>
+  <string name="title_activity_login">Sign in</string>
 
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email        completions."    </string>
+  <!-- Strings related to login -->
+  <string name="prompt_email">Email</string>
+  <string name="prompt_password">Password (optional)</string>
+  <string name="action_sign_in">Sign in or register</string>
+  <string name="action_sign_in_short">Sign in</string>
+  <string name="error_invalid_email">This email address is invalid</string>
+  <string name="error_invalid_password">This password is too short</string>
+  <string name="error_incorrect_password">This password is incorrect</string>
+  <string name="error_field_required">This field is required</string>
+  <string name="permission_rationale">"Contacts permissions are needed for providing email        completions."    </string>
 
-    <string name="main_goto_old_test_activity">OldTestActivity</string>
-    
-    <!-- LifecycleActivity -->
-    <string name="lifecycle_dialog_title">DialogTitle</string>
-    <string name="lifecycle_dialog_content">DialogContent</string>
+  <string name="main_goto_old_test_activity">OldTestActivity</string>
 
-    <!-- ADialogFragment-->
-    <string name="a_dialog_this_is_a_dialog">this is a dialog fragment</string>
+  <!-- LifecycleActivity -->
+  <string name="lifecycle_dialog_title">DialogTitle</string>
+  <string name="lifecycle_dialog_content">DialogContent</string>
 
-    <!-- SocketProgrammingActivity -->
-    <string name="socket_programming_data_to_send">发送数据：</string>
-    <string name="socket_programming_data_to_receive">接收数据：</string>
+  <!-- ADialogFragment-->
+  <string name="a_dialog_this_is_a_dialog">this is a dialog fragment</string>
 
-    <!-- AnimatorTestActivity -->
-    <string name="animator_test_of_int_animator">ofInt</string>
-    <string name="animator_test_of_object_animator">ofObject</string>
-    <string name="animator_test_argb_evaluator">ArgbEvaluator</string>
-    <string name="animator_test_object_animator">ObjectAnimator</string>
-    <string name="animator_test_property_values_holder_test">PropertyValuesHolder</string>
-    <string name="animator_test_keyframe_test">Keyframe</string>
-    <string name="animator_test_of_object_keyframe_test">Keyframe#ofObject</string>
-    <string name="animator_test_play_together_test">playTogether</string>
-    <string name="animator_test_play_builder_test">play Builder</string>
+  <!-- SocketProgrammingActivity -->
+  <string name="socket_programming_data_to_send">发送数据：</string>
+  <string name="socket_programming_data_to_receive">接收数据：</string>
 
-    <!-- LaunchModeActivity -->
-    <string name="launch_mode_start_standard_launch_mode_activity">Standard</string>
-    <string name="launch_mode_start_singletop_launch_mode_activity">Singletop</string>
-    <string name="launch_mode_start_single_task_launch_mode_activity">SingleTask</string>
-    <string name="launch_mode_start_single_instance_launch_mode_activity">SingleInstance</string>
-    <string name="launch_mode_start_dialog_activity">DialogActivity</string>
+  <!-- AnimatorTestActivity -->
+  <string name="animator_test_of_int_animator">ofInt</string>
+  <string name="animator_test_of_object_animator">ofObject</string>
+  <string name="animator_test_argb_evaluator">ArgbEvaluator</string>
+  <string name="animator_test_object_animator">ObjectAnimator</string>
+  <string name="animator_test_property_values_holder_test">PropertyValuesHolder</string>
+  <string name="animator_test_keyframe_test">Keyframe</string>
+  <string name="animator_test_of_object_keyframe_test">Keyframe#ofObject</string>
+  <string name="animator_test_play_together_test">playTogether</string>
+  <string name="animator_test_play_builder_test">play Builder</string>
 
-    <!-- IntercommunicationActivity -->
-    <string name="intercommunication_bind_service">bindService(?,?,?)</string>
-    <string name="intercommunication_unbind_service">unbindService(?)</string>
-    <string name="intercommunication_communicate_directly">直接通信</string>
-    <string name="intercommunication_start_downloading">startDownloading</string>
-    <string name="intercommunication_stop_downloading">stopDownloading</string>
-    <string name="intercommunication_data_sent_to_service">Data sent to service:</string>
-    <string name="intercommunication_data_received_from_service">Data received from service:</string>
-    <string name="intercommunication_format_percentage">%.2f%%</string>
-    <string name="intercommunication_communicate_via_receiver">通过广播通信</string>
-    <string name="intercommunication_communicate_with_messenger">通过Messenger通信</string>
-    <string name="intercommunication_communicate_via_aidl">通过AIDL通信</string>
-    <string name="intercommunication_bind_remote_service">bind remote service</string>
-    <string name="intercommunication_unbind_remote_service">unbind remote service</string>
-    <string name="intercommunication_start_service_to_download">start service to download</string>
-    <string name="intercommunication_stop_service">stop service</string>
+  <!-- LaunchModeActivity -->
+  <string name="launch_mode_start_standard_launch_mode_activity">Standard</string>
+  <string name="launch_mode_start_singletop_launch_mode_activity">Singletop</string>
+  <string name="launch_mode_start_single_task_launch_mode_activity">SingleTask</string>
+  <string name="launch_mode_start_single_instance_launch_mode_activity">SingleInstance</string>
+  <string name="launch_mode_start_dialog_activity">DialogActivity</string>
 
-    <!-- MyEditText -->
-    <string name="my_edit_text_clear">清除</string>
-    <string name="my_edit_text_hint">输入内容</string>
+  <!-- IntercommunicationActivity -->
+  <string name="intercommunication_bind_service">bindService(?,?,?)</string>
+  <string name="intercommunication_unbind_service">unbindService(?)</string>
+  <string name="intercommunication_communicate_directly">直接通信</string>
+  <string name="intercommunication_start_downloading">startDownloading</string>
+  <string name="intercommunication_stop_downloading">stopDownloading</string>
+  <string name="intercommunication_data_sent_to_service">Data sent to service:</string>
+  <string name="intercommunication_data_received_from_service">Data received from service:</string>
+  <string name="intercommunication_format_percentage">%.2f%%</string>
+  <string name="intercommunication_communicate_via_receiver">通过广播通信</string>
+  <string name="intercommunication_communicate_with_messenger">通过Messenger通信</string>
+  <string name="intercommunication_communicate_via_aidl">通过AIDL通信</string>
+  <string name="intercommunication_bind_remote_service">bind remote service</string>
+  <string name="intercommunication_unbind_remote_service">unbind remote service</string>
+  <string name="intercommunication_start_service_to_download">start service to download</string>
+  <string name="intercommunication_stop_service">stop service</string>
+
+  <!--DataBindingTestActivity-->
+  <string name="data_binding_test_change_goods_name_and_price">改变name和price</string>
+  <string name="data_binding_test_change_goods_details_and_price">改变details和price</string>
+  <string name="data_binding_test_username">用户名</string>
+  <string name="data_binding_test_password">密码</string>
+  <string name="data_binding_test_change_observable_array_map_and_list">改变map和list</string>
+  <string name="data_binding_test_fragment">DataBindingTestFragment</string>
+  <string name="data_binding_test_view_stub">ViewStub</string>
+  <string name="data_binding_test_this">this</string>
+  <string name="data_binding_test_change_private">改变private</string>
+  <string name="data_binding_test_change_default">改变default</string>
+  <string name="data_binding_test_change_protected">改变protected</string>
+  <string name="data_binding_test_change_public">改变public</string>
+  <string name="data_binding_test_format_goods_price">%.2f</string>
+
+
+  <!-- MyEditText -->
+  <string name="my_edit_text_clear">清除</string>
+  <string name="my_edit_text_hint">输入内容</string>
 </resources>
