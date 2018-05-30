@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <data>
+    <variable
+      name="javabean"
+      type="com.seckawijoki.android_test.javabean.DataBindingJavabean"/>
+    <variable
+      name="observableJavabean"
+      type="com.seckawijoki.android_test.javabean.DataBindingObservableJavabean"/>
+    <variable
+      name="javabeanHandler"
+      type="com.seckawijoki.android_test.activity.DataBindingTestActivity.DataBindingJavabeanHandler"/>
+  </data>
+  <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_weight="1"
+      android:gravity="center_horizontal"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content">
+      <TextView
+        style="@style/data_binding_test_tv"
+        android:text="@{javabean.privateField}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <TextView
+        style="@style/data_binding_test_tv"
+        android:text="@{javabean.defaultField}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <TextView
+        style="@style/data_binding_test_tv"
+        android:text="@{javabean.protectedField}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <TextView
+        style="@style/data_binding_test_tv"
+        android:text="@{javabean.publicField}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <Button
+        android:onClick="@{()->javabeanHandler.changePrivate()}"
+        android:text="@string/data_binding_test_change_private"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <Button
+        android:onClick="@{()->javabeanHandler.changeProtected()}"
+        android:text="@string/data_binding_test_change_protected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_weight="1"
+      android:gravity="center_horizontal"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content">
+      <TextView
+        style="@style/data_binding_test_tv"
+        android:text="@{observableJavabean.privateField}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <TextView
+        style="@style/data_binding_test_tv"
+        android:text="@{observableJavabean.defaultField}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <TextView
+        style="@style/data_binding_test_tv"
+        android:text="@{observableJavabean.protectedField}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <TextView
+        style="@style/data_binding_test_tv"
+        android:text="@{observableJavabean.publicField}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <Button
+        android:onClick="@{()->javabeanHandler.changeDefault()}"
+        android:text="@string/data_binding_test_change_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <Button
+        android:onClick="@{()->javabeanHandler.changePublic()}"
+        android:text="@string/data_binding_test_change_public"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+  </LinearLayout>
+</layout>

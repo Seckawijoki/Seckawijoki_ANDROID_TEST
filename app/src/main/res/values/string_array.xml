@@ -10,7 +10,7 @@
         <item>CollapsingToolbarLayout</item>
         <item>SingleChoiceRecyclerView</item>
         <item>Activity与Service通信</item>
-        <item>DataBindingDemo</item>
+        <item>DataBindingTest</item>
         <!--<item>Socket编程</item>-->
         <!--<item>百度推流SDK</item>-->
     </string-array>
