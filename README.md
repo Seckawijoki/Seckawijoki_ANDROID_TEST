@@ -1,0 +1,4 @@
+# Seckawijoki_ANDROID_TEST
+关于在Ubuntu下无法编译运行从GitHub克隆或更新的Windows下更新的Android项目，或者在Windows下无法编译运行从GitHub克隆或更新的Ubuntu下更新的Android项目，解决方法在以下链接：
+
+https://www.jianshu.com/p/96d97f16fdb7
