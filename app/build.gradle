@@ -13,9 +13,7 @@ android {
         // Specifies a flavor dimension.
         flavorDimensions "demo"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        ndk {
-            moduleName = "androidTest"
-        }
+//        ndk {            moduleName = "androidTest"        }
         // for detailed abiFilter descriptions, refer to "Supported ABIs" @
         // https://developer.android.com/ndk/guides/abis.html#sa
 //        create("arm") {            ndk.abiFilters.add("armeabi")        }
@@ -45,6 +43,12 @@ android {
             minifyEnabled false
             multiDexEnabled = true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild{
+        cmake{
+            path "CMakeLists.txt"
+//            abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
         }
     }
 //    aaptOptions {        cruncherEnabled=false        useNewCruncher=false    }
