@@ -83,6 +83,16 @@ public final class RecyclerButton extends RecyclerView.Adapter<RecyclerButton.Vi
       return this;
     }
 
+    public Builder setReverseGrid(int column){
+      instance.span = column;
+      layoutManager = new GridLayoutManager(
+              instance.context,
+              column,
+              GridLayoutManager.VERTICAL,
+              true);
+      return this;
+    }
+
     public Builder setVertical(int column) {
       if (column <= 1) return setVertical();
       instance.span = column;

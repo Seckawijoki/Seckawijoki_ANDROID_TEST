@@ -1,330 +1,342 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.seckawijoki.android_test">
+  package="com.seckawijoki.android_test">
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.READ_PROFILE"/>
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+  <!-- To auto-complete the email text field in the login form with the user's emails -->
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="android.permission.READ_PROFILE" />
+  <uses-permission android:name="android.permission.READ_CONTACTS" />
 
-    <!--//地图包、搜索包需要的基础权限-->
-    <!--允许程序打开网络套接字-->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--允许程序设置内置sd卡的写权限-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!--允许程序获取网络状态-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--允许程序访问WiFi网络信息-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!--允许程序读写手机状态和身份-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <!--//地图包、搜索包需要的基础权限-->
+  <!--允许程序打开网络套接字-->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <!--允许程序设置内置sd卡的写权限-->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <!--允许程序获取网络状态-->
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <!--允许程序访问WiFi网络信息-->
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <!--允许程序读写手机状态和身份-->
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-    <!-- 申明应用需要用到相机 -->
-    <uses-feature android:name="android.hardware.camera" />
-    <!-- 申明应用需要用到自动对焦 -->
-    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
-    <!-- 申请相机使用权限 -->
-    <uses-permission android:name="android.permission.CAMERA" />
-    <!-- 申明录音权限 -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <!-- 申明应用需要用到相机 -->
+  <uses-feature android:name="android.hardware.camera" />
+  <!-- 申明应用需要用到自动对焦 -->
+  <uses-feature
+    android:name="android.hardware.camera.autofocus"
+    android:required="false" />
+  <!-- 申请相机使用权限 -->
+  <uses-permission android:name="android.permission.CAMERA" />
+  <!-- 申明录音权限 -->
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <!--解决Exported service does not require permission警告-->
-    <permission
-        android:protectionLevel="normal"
-        android:name="oem.permission.SENDMAIL" />
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/MyAppTheme">
-        <activity
-            android:launchMode="singleTask"
-            android:name=".activity.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+  <!--解决Exported service does not require permission警告-->
+  <permission
+    android:name="oem.permission.SENDMAIL"
+    android:protectionLevel="normal" />
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:name=".application.MyApplication"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/MyAppTheme">
+    <activity
+      android:name=".activity.MainActivity"
+      android:launchMode="singleTask">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.LoginActivity"
-            android:label="@string/title_activity_login">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.seckawijoki.android_test.activity.OldTestActivity"/>
-        </activity>
-        <activity
-            android:name=".activity.OldTestActivity"
-            android:label="@string/app_name"
-            android:theme="@style/MyAppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.OLD_TEST"/>
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.LoginActivity"
+      android:label="@string/title_activity_login">
+      <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="com.seckawijoki.android_test.activity.OldTestActivity" />
+    </activity>
+    <activity
+      android:name=".activity.OldTestActivity"
+      android:label="@string/app_name"
+      android:theme="@style/MyAppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.OLD_TEST" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.NavigationViewActivity"
-            android:label="@string/btn_navigation_view_activity"
-            android:theme="@style/MyAppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.NAVIGATION_VIEW"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.NavigationViewActivity"
+      android:label="@string/btn_navigation_view_activity"
+      android:theme="@style/MyAppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.NAVIGATION_VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.TouchForLargeningActivity"
-            android:label="@string/btn_touch_for_largening_activity"
-            android:theme="@style/MyAppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.TOUCH_FOR_LARGENING"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.TouchForLargeningActivity"
+      android:label="@string/btn_touch_for_largening_activity"
+      android:theme="@style/MyAppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.TOUCH_FOR_LARGENING" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.DateGroupedActivity"
-            android:label="@string/btn_date_grouped_activity"
-            android:theme="@style/MyAppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.DATE_GROUPED"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.DateGroupedActivity"
+      android:label="@string/btn_date_grouped_activity"
+      android:theme="@style/MyAppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.DATE_GROUPED" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.MyServiceTestActivity"
-            android:label="@string/btn_date_grouped_activity"
-            android:theme="@style/MyAppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.MY_SERVICE_TEST"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.MyServiceTestActivity"
+      android:label="@string/btn_date_grouped_activity"
+      android:theme="@style/MyAppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.MY_SERVICE_TEST" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.WhetherInUiThreadActivity">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.WHETHER_IN_UI_THREAD"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.WhetherInUiThreadActivity">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.WHETHER_IN_UI_THREAD" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.LifecycleActivity"
-            android:configChanges="orientation|screenSize"
-            android:label="@string/btn_lifecycle_activity">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.LIFECYCLE"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.LifecycleActivity"
+      android:configChanges="orientation|screenSize"
+      android:label="@string/btn_lifecycle_activity">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.LIFECYCLE" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.AnActivity"
-            android:label="@string/btn_lifecycle_activity">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.AN_ACTIVITY"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.AnActivity"
+      android:label="@string/btn_lifecycle_activity">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.AN_ACTIVITY" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.ADialogActivity"
-            android:theme="@style/MyDialogActivityTheme"
-            android:label="@string/btn_lifecycle_activity">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.A_DIALOG_ACTIVITY"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.ADialogActivity"
+      android:label="@string/btn_lifecycle_activity"
+      android:theme="@style/MyDialogActivityTheme">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.A_DIALOG_ACTIVITY" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.DispatchTestActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.DISPATCH_TEST"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.DispatchTestActivity"
+      android:theme="@style/Theme.AppCompat.NoActionBar">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.DISPATCH_TEST" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.AmapTestActivity">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.AMAP_TEST"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".activity.AmapTestActivity">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.AMAP_TEST" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.SocketProgrammingActivity">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.SOCKET_PROGRAMMING"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".activity.SocketProgrammingActivity">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.SOCKET_PROGRAMMING" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.AnimatorTestActivity">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.ANIMATOR_TEST"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".activity.AnimatorTestActivity">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.ANIMATOR_TEST" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:label="@string/launch_mode_start_standard_launch_mode_activity"
-            android:name=".activity.StandardLaunchModeActivity"
-            android:launchMode="standard">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.LAUNCH_MODE"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.StandardLaunchModeActivity"
+      android:label="@string/launch_mode_start_standard_launch_mode_activity"
+      android:launchMode="standard">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.LAUNCH_MODE" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:label="@string/launch_mode_start_singletop_launch_mode_activity"
-            android:name=".activity.SingletopLaunchModeActivity"
-            android:launchMode="singleTop">
-            <intent-filter>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.SingletopLaunchModeActivity"
+      android:label="@string/launch_mode_start_singletop_launch_mode_activity"
+      android:launchMode="singleTop">
+      <intent-filter>
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:label="@string/launch_mode_start_single_task_launch_mode_activity"
-            android:name=".activity.SingleTaskLaunchModeActivity"
-            android:launchMode="singleTask">
-            <intent-filter>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.SingleTaskLaunchModeActivity"
+      android:label="@string/launch_mode_start_single_task_launch_mode_activity"
+      android:launchMode="singleTask">
+      <intent-filter>
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:label="@string/launch_mode_start_single_instance_launch_mode_activity"
-            android:name=".activity.SingleInstanceLaunchModeActivity"
-            android:launchMode="singleInstance">
-            <intent-filter>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.SingleInstanceLaunchModeActivity"
+      android:label="@string/launch_mode_start_single_instance_launch_mode_activity"
+      android:launchMode="singleInstance">
+      <intent-filter>
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
 
-        <activity android:name=".activity.BaiduPushFlowActivity">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.BAIDU_PUSH_FLOW"/>
+    <activity android:name=".activity.BaiduPushFlowActivity">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.BAIDU_PUSH_FLOW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.CollapsingToolbarActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"            >
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.COLLAPSING_TOOLBAR"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity
+      android:name=".activity.CollapsingToolbarActivity"
+      android:theme="@style/Theme.AppCompat.NoActionBar">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.COLLAPSING_TOOLBAR" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.SingleChoiceRecyclerViewActivity">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.SINGLE_CHOICE_RECYCLER_VIEW"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".activity.SingleChoiceRecyclerViewActivity">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.SINGLE_CHOICE_RECYCLER_VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".mvp_example.MvpActivity" />
-        <activity android:name=".activity.IntercommunicationActivity">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.INTERCOMMUNICATION"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".mvp_example.MvpActivity" />
+    <activity android:name=".activity.IntercommunicationActivity">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.INTERCOMMUNICATION" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.DataBindingTestActivity">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.DATA_BINDING_TEST"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".activity.DataBindingTestActivity">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.DATA_BINDING_TEST" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+    <activity android:name=".activity.MyAndroidLibraryTestActivity">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.MY_ANDROID_LIBRARY_TEST" />
 
-        <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-        <!-- Services -->
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
 
-        <service android:name=".service.MyTestingService"/>
-        <service
-            android:permission="oem.permission.SENDMAIL"
-            android:name=".service.SomeRemoteService"
-            android:exported="true"
-            android:process=":remote">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.service.SOME_REMOTE_SERVICE"/>
-            </intent-filter>
-        </service>
-        <service
-            android:name=".service.WhetherIntentService"
-            android:exported="false"/>
-        <service android:name=".service.LifecycleService" />
-        <service android:name=".service.IntercommunicationService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.service.INTERCOMMUNICATION"/>
-            </intent-filter>
-        </service>
-        <service
-            android:permission="@string/common_component_permission_name"
-            android:exported="true"
-            android:enabled="true"
-            android:name=".service.MessengerIntercommunicationService">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.service.MESSENGER_INTERCOMMUNICATION"/>
+    <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!-- Services -->
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </service>
+    <service android:name=".service.MyTestingService" />
+    <service
+      android:name=".service.SomeRemoteService"
+      android:exported="true"
+      android:permission="oem.permission.SENDMAIL"
+      android:process=":remote">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.service.SOME_REMOTE_SERVICE" />
+      </intent-filter>
+    </service>
+    <service
+      android:name=".service.WhetherIntentService"
+      android:exported="false" />
+    <service android:name=".service.LifecycleService" />
+    <service
+      android:name=".service.IntercommunicationService"
+      android:exported="false">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.service.INTERCOMMUNICATION" />
+      </intent-filter>
+    </service>
+    <service
+      android:name=".service.MessengerIntercommunicationService"
+      android:enabled="true"
+      android:exported="true"
+      android:permission="@string/common_component_permission_name">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.service.MESSENGER_INTERCOMMUNICATION" />
 
-        <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-        <!--BroadcastReceivers-->
-        <receiver
-            android:name=".receiver.WhetherReceiver"
-            android:enabled="true"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.receiver.WHETHER_IN_UI_THREAD" />
-            </intent-filter>
-        </receiver>
-        <receiver
-            android:permission="oem.permission.SENDMAIL"
-            android:enabled="true"
-            android:exported="true"
-            android:name=".receiver.IntercommunicationReceiver">
-            <intent-filter>
-                <action android:name="com.seckawijoki.android_test.receiver.INTERCOMMUNICATION"/>
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </service>
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </receiver>
+    <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--BroadcastReceivers-->
+    <receiver
+      android:name=".receiver.WhetherReceiver"
+      android:enabled="true"
+      android:exported="false">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.receiver.WHETHER_IN_UI_THREAD" />
+      </intent-filter>
+    </receiver>
+    <receiver
+      android:name=".receiver.IntercommunicationReceiver"
+      android:enabled="true"
+      android:exported="true"
+      android:permission="oem.permission.SENDMAIL">
+      <intent-filter>
+        <action android:name="com.seckawijoki.android_test.receiver.INTERCOMMUNICATION" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </receiver>
 
 
-        <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-        <!--ContentProviders-->
-        <provider
-            android:name=".provider.WhetherContentProvider"
-            android:authorities="com.seckawijoki.android_test.provider"
-            android:enabled="true"
-            android:exported="false"/>
-        <!-- 这个标签开判断我们生成的patch的.apk文件中的tinker_id_XXX
-        与我们的版本号tinker_id_XXX比较。相同合法，不同则不会进行更新 -->
+    <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!--ContentProviders-->
+    <provider
+      android:name=".provider.WhetherContentProvider"
+      android:authorities="com.seckawijoki.android_test.provider"
+      android:enabled="true"
+      android:exported="false" />
+    <!-- 这个标签开判断我们生成的patch的.apk文件中的tinker_id_XXX
+    与我们的版本号tinker_id_XXX比较。相同合法，不同则不会进行更新 -->
 
-        <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-        <meta-data
-            android:name="TINKER_ID"
-            android:value="tinker_id_19940208"/>
-        <meta-data
-            android:name="com.amap.api.v2.apikey"
-            android:value="50b947a298947e4ef9a91db92feee0ec"/>
-    </application>
+    <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <meta-data
+      android:name="TINKER_ID"
+      android:value="tinker_id_19940208" />
+    <meta-data
+      android:name="com.amap.api.v2.apikey"
+      android:value="50b947a298947e4ef9a91db92feee0ec" />
+  </application>
 
 </manifest>

@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment;
 /**
  * Created by seckawijoki on 18-5-5 at 下午9:20.
  */
-public class CallbackFragment extends Fragment{
+public class CallbackFragment extends Fragment implements CallbackContract.View{
   private CallbackPresenterImpl presenter;
   @Override
   public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -22,5 +22,25 @@ public class CallbackFragment extends Fragment{
   public void onDestroy() {
     super.onDestroy();
     presenter.destroy();
+  }
+
+  @Override
+  public void displayCallback() {
+
+  }
+
+  @Override
+  public void onPresenterInit() {
+
+  }
+
+  @Override
+  public void onModelInit() {
+
+  }
+
+  @Override
+  public void setActionCallback(ActionCallback actionCallback) {
+
   }
 }

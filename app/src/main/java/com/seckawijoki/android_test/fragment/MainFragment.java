@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.seckawijoki.android_test.R;
 import com.seckawijoki.android_test.base.RecyclerButton;
 import com.seckawijoki.android_test.constant.IntentActions;
+import com.seckawijoki.android_test.util.ToastUtil;
 
 /**
  * Created by 瑶琴频曲羽衣魂 on 2018/3/11 at 16:25.
@@ -40,7 +41,7 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
             .setRecyclerView(rv)
             .setWidth(120)
             .setHeight(120)
-            .setVertical(3)
+            .setReverseGrid(3)
             .setOnRecyclerButtonClickListener(this)
             .build();
   }
@@ -58,6 +59,9 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
   @Override
   public void onClick(int position) {
     switch (position) {
+      default:
+        ToastUtil.makeText(getContext(), R.string.app_name);
+        break;
       case Activities.SOCKET_PROGRAMMING:
 //        startActivity(new Intent(IntentActions.SOCKET_PROGRAMMING));
         break;
@@ -82,7 +86,6 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
       case Activities.ANIMATOR_TEST:
         startActivity(new Intent(IntentActions.ANIMATOR_TEST));
         break;
-      default:
       case Activities.LAUNCH_MODE:
         startActivity(new Intent(IntentActions.LAUNCH_MODE));
         break;
@@ -97,6 +100,9 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
         break;
       case Activities.DATA_BINDING_TEST:
         startActivity(IntentActions.DATA_BINDING_TEST);
+        break;
+      case Activities.MY_ANDROID_LIBRARY_TEST:
+        startActivity(IntentActions.MY_ANDROID_LIBRARY_TEST);
         break;
     }
   }
@@ -115,5 +121,6 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
     int DATA_BINDING_TEST = 10;
     int SOCKET_PROGRAMMING = 98;
     int BAIDU_PUSH_FLOW = 99;
+    int MY_ANDROID_LIBRARY_TEST = 100;
   }
 }
