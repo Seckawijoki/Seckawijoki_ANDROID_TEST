@@ -4,10 +4,10 @@
   <data>
     <variable
       name="userInfo"
-      type="com.seckawijoki.android_test.javabean.DataBindingUser"/>
+      type="com.seckawijoki.androidtest.javabean.DataBindingUser"/>
     <variable
       name="userPresenter"
-      type="com.seckawijoki.android_test.activity.DataBindingTestActivity.DataBindingUserPresenter"/>
+      type="com.seckawijoki.androidtest.activity.DataBindingTestActivity.DataBindingUserPresenter"/>
   </data>
 
   <LinearLayout

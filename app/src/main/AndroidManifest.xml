@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.seckawijoki.android_test">
+  package="com.seckawijoki.androidtest">
 
   <!-- To auto-complete the email text field in the login form with the user's emails -->
   <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -58,7 +58,7 @@
       android:label="@string/title_activity_login">
       <meta-data
         android:name="android.support.PARENT_ACTIVITY"
-        android:value="com.seckawijoki.android_test.activity.OldTestActivity" />
+        android:value="com.seckawijoki.androidtest.activity.OldTestActivity" />
     </activity>
     <activity
       android:name=".activity.OldTestActivity"
@@ -238,7 +238,7 @@
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
-    <activity android:name=".mvp_example.MvpActivity" />
+    <activity android:name=".mvp.example.MvpActivity" />
     <activity android:name=".activity.IntercommunicationActivity">
       <intent-filter>
         <action android:name="com.seckawijoki.android_test.INTERCOMMUNICATION" />
@@ -324,7 +324,7 @@
     <!--ContentProviders-->
     <provider
       android:name=".provider.WhetherContentProvider"
-      android:authorities="com.seckawijoki.android_test.provider"
+      android:authorities="com.seckawijoki.androidtest.provider"
       android:enabled="true"
       android:exported="false" />
     <!-- 这个标签开判断我们生成的patch的.apk文件中的tinker_id_XXX

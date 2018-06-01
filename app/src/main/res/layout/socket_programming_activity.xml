@@ -13,12 +13,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>
-    <com.seckawijoki.android_test.widget.MyEditText
+    <com.seckawijoki.androidtest.widget.MyEditText
         android:id="@+id/et_data_to_send"
         app:TitleText="@string/socket_programming_data_to_send"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    <com.seckawijoki.android_test.widget.MyEditText
+    <com.seckawijoki.androidtest.widget.MyEditText
         android:id="@+id/et_to_receive"
         app:TitleText="@string/socket_programming_data_to_receive"
         android:layout_width="match_parent"

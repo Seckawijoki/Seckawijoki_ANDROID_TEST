@@ -5,7 +5,7 @@
               android:layout_height="match_parent">
 
     <fragment
-        android:name="com.seckawijoki.android_test.fragment.MainFragment"
+        android:name="com.seckawijoki.androidtest.fragment.MainFragment"
         android:id="@+id/layout_main_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

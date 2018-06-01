@@ -4,26 +4,26 @@
   xmlns:bind="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools">
   <data>
-    <import type="com.seckawijoki.android_test.activity.DataBindingTestActivity"/>
-    <import type="com.seckawijoki.android_test.javabean.DataBindingUser" />
-    <import type="com.seckawijoki.android_test.javabean.DataBindingGoods" />
-    <import type="com.seckawijoki.android_test.javabean.DataBindingObservableGoods" />
-    <import type="com.seckawijoki.android_test.activity.DataBindingTestActivity.GoodsHandler" />
+    <import type="com.seckawijoki.androidtest.activity.DataBindingTestActivity"/>
+    <import type="com.seckawijoki.androidtest.javabean.DataBindingUser" />
+    <import type="com.seckawijoki.androidtest.javabean.DataBindingGoods" />
+    <import type="com.seckawijoki.androidtest.javabean.DataBindingObservableGoods" />
+    <import type="com.seckawijoki.androidtest.activity.DataBindingTestActivity.GoodsHandler" />
     <import type="android.databinding.ObservableArrayMap" />
     <import type="android.databinding.ObservableList" />
-    <import type="com.seckawijoki.android_test.activity.DataBindingTestActivity.DataBindingUserPresenter" />
+    <import type="com.seckawijoki.androidtest.activity.DataBindingTestActivity.DataBindingUserPresenter" />
     <variable
       name="userInfo"
-      type="com.seckawijoki.android_test.javabean.DataBindingUser" />
+      type="com.seckawijoki.androidtest.javabean.DataBindingUser" />
     <variable
       name="goods"
-      type="com.seckawijoki.android_test.javabean.DataBindingGoods" />
+      type="com.seckawijoki.androidtest.javabean.DataBindingGoods" />
     <variable
       name="observableGoods"
-      type="com.seckawijoki.android_test.javabean.DataBindingObservableGoods" />
+      type="com.seckawijoki.androidtest.javabean.DataBindingObservableGoods" />
     <variable
       name="goodsHandler"
-      type="com.seckawijoki.android_test.activity.DataBindingTestActivity.GoodsHandler" />
+      type="com.seckawijoki.androidtest.activity.DataBindingTestActivity.GoodsHandler" />
     <variable
       name="map"
       type="android.databinding.ObservableArrayMap&lt;String, String&gt;" />
@@ -38,16 +38,16 @@
       type="String" />
     <variable
       name="userPresenter"
-      type="com.seckawijoki.android_test.activity.DataBindingTestActivity.DataBindingUserPresenter" />
+      type="com.seckawijoki.androidtest.activity.DataBindingTestActivity.DataBindingUserPresenter" />
     <variable
       name="javabean"
-      type="com.seckawijoki.android_test.javabean.DataBindingJavabean"/>
+      type="com.seckawijoki.androidtest.javabean.DataBindingJavabean"/>
     <variable
       name="observableJavabean"
-      type="com.seckawijoki.android_test.javabean.DataBindingObservableJavabean"/>
+      type="com.seckawijoki.androidtest.javabean.DataBindingObservableJavabean"/>
     <variable
       name="javabeanHandler"
-      type="com.seckawijoki.android_test.activity.DataBindingTestActivity.DataBindingJavabeanHandler"/>
+      type="com.seckawijoki.androidtest.activity.DataBindingTestActivity.DataBindingJavabeanHandler"/>
   </data>
 
   <ScrollView

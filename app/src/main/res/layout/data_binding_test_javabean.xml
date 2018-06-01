@@ -4,13 +4,13 @@
   <data>
     <variable
       name="javabean"
-      type="com.seckawijoki.android_test.javabean.DataBindingJavabean"/>
+      type="com.seckawijoki.androidtest.javabean.DataBindingJavabean"/>
     <variable
       name="observableJavabean"
-      type="com.seckawijoki.android_test.javabean.DataBindingObservableJavabean"/>
+      type="com.seckawijoki.androidtest.javabean.DataBindingObservableJavabean"/>
     <variable
       name="javabeanHandler"
-      type="com.seckawijoki.android_test.activity.DataBindingTestActivity.DataBindingJavabeanHandler"/>
+      type="com.seckawijoki.androidtest.activity.DataBindingTestActivity.DataBindingJavabeanHandler"/>
   </data>
   <LinearLayout
     android:orientation="horizontal"
