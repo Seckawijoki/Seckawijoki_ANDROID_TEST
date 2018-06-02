@@ -55,7 +55,7 @@ public abstract class AbsActivity extends AppCompatActivity {
    * "java.lang.IllegalArgumentException: Service Intent must be explicit"
    *
    * If you are using an implicit intent, and know only 1 target would answer this intent,
-   * This method will help you turn the implicit intent into the explicit form.
+   * This javaMethod will help you turn the implicit intent into the explicit form.
    *
    * Inspired from SO answer: http://stackoverflow.com/a/26318757/1446466
    * @param context context

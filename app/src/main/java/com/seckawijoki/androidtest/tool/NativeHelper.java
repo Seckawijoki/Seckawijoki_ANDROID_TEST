@@ -8,4 +8,5 @@ public class NativeHelper {
     System.loadLibrary("native-lib");
   }
   public static native String getAppKey();
+  public static native void invokeJavaFromC();
 }

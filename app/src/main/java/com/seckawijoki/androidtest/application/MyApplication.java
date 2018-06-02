@@ -15,7 +15,8 @@ public class MyApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    FruitAnnotationTool.getInfo(Apple.class);
-    Log.d(TAG, "onCreate()\n: " + NativeHelper.getAppKey());
+//    FruitAnnotationTool.getInfo(Apple.class);
+//    Log.d(TAG, "onCreate()\n: " + NativeHelper.getAppKey());
+    NativeHelper.invokeJavaFromC();
   }
 }
