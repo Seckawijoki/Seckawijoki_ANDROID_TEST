@@ -13,4 +13,11 @@ public class InvokedJava {
   public static void javaStaticMethod(){
     Log.i(TAG, "javaStaticMethod(): ");
   }
+  public static String getGreeting(){
+    Log.i(TAG, "getGreeting(): ");
+    return "Hello, JNI!";
+  }
+  public void sayHelloToJava(String greeting){
+    Log.d(TAG, "sayHelloToJava()\n: greeting = " + greeting);
+  }
 }

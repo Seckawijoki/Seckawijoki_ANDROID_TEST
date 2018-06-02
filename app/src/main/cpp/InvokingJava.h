@@ -7,3 +7,5 @@
 
 void InvokeJavaMethod();
 void InvokeJavaStaticMethod();
+void GetGreeting();
+void SayHelloToJava();

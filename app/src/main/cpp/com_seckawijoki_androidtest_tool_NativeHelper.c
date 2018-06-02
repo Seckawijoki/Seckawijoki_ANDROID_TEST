@@ -20,4 +20,6 @@ Java_com_seckawijoki_androidtest_tool_NativeHelper_invokeJavaFromC(JNIEnv *env, 
     }
     InvokeJavaMethod();
     InvokeJavaStaticMethod();
+    GetGreeting();
+    SayHelloToJava();
 }
