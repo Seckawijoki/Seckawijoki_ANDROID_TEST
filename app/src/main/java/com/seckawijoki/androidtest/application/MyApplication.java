@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.seckawijoki.androidtest.javabean.Apple;
 import com.seckawijoki.androidtest.tool.FruitAnnotationTool;
+import com.seckawijoki.androidtest.tool.ImplicitNativeHelper;
 import com.seckawijoki.androidtest.tool.NativeHelper;
 
 /**
@@ -16,6 +17,7 @@ public class MyApplication extends Application {
   public void onCreate() {
     super.onCreate();
 //    FruitAnnotationTool.getInfo(Apple.class);
-    NativeHelper.invokeNativeMethodFromApplication();
+//    NativeHelper.invokeNativeMethodFromApplication();
+    ImplicitNativeHelper.invokeNativeMethodFromApplication();
   }
 }
