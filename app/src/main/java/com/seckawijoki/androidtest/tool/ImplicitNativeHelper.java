@@ -11,9 +11,9 @@ public class ImplicitNativeHelper {
     System.loadLibrary("implicitnativehelper-lib");
   }
   public static void invokeNativeMethodFromApplication(){
-    Log.d(TAG, "invokeNativeMethodFromApplication()\n: getAppKey() = " + getAppKey());
+    Log.d(TAG, "getAppKey() = " + getAppKey());
 //    Log.i(TAG, callFromMainLib());
-//    invokeJavaFromC();
+    invokeJavaFromC();
   }
   private static native String getAppKey();
   private static native void invokeJavaFromC();
