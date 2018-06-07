@@ -65,7 +65,7 @@
       android:label="@string/app_name"
       android:theme="@style/MyAppTheme.NoActionBar">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.OLD_TEST" />
+        <action android:name="com.seckawijoki.androidtest.OLD_TEST" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -75,7 +75,7 @@
       android:label="@string/btn_navigation_view_activity"
       android:theme="@style/MyAppTheme.NoActionBar">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.NAVIGATION_VIEW" />
+        <action android:name="com.seckawijoki.androidtest.NAVIGATION_VIEW" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -85,7 +85,7 @@
       android:label="@string/btn_touch_for_largening_activity"
       android:theme="@style/MyAppTheme.NoActionBar">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.TOUCH_FOR_LARGENING" />
+        <action android:name="com.seckawijoki.androidtest.TOUCH_FOR_LARGENING" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -95,7 +95,7 @@
       android:label="@string/btn_date_grouped_activity"
       android:theme="@style/MyAppTheme.NoActionBar">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.DATE_GROUPED" />
+        <action android:name="com.seckawijoki.androidtest.DATE_GROUPED" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -105,7 +105,7 @@
       android:label="@string/btn_date_grouped_activity"
       android:theme="@style/MyAppTheme.NoActionBar">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.MY_SERVICE_TEST" />
+        <action android:name="com.seckawijoki.androidtest.MY_SERVICE_TEST" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -113,7 +113,7 @@
     <activity
       android:name=".activity.WhetherInUiThreadActivity">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.WHETHER_IN_UI_THREAD" />
+        <action android:name="com.seckawijoki.androidtest.WHETHER_IN_UI_THREAD" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -123,7 +123,7 @@
       android:configChanges="orientation|screenSize"
       android:label="@string/btn_lifecycle_activity">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.LIFECYCLE" />
+        <action android:name="com.seckawijoki.androidtest.LIFECYCLE" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -132,7 +132,7 @@
       android:name=".activity.AnActivity"
       android:label="@string/btn_lifecycle_activity">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.AN_ACTIVITY" />
+        <action android:name="com.seckawijoki.androidtest.AN_ACTIVITY" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -142,7 +142,7 @@
       android:label="@string/btn_lifecycle_activity"
       android:theme="@style/MyDialogActivityTheme">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.A_DIALOG_ACTIVITY" />
+        <action android:name="com.seckawijoki.androidtest.A_DIALOG_ACTIVITY" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -151,28 +151,28 @@
       android:name=".activity.DispatchTestActivity"
       android:theme="@style/Theme.AppCompat.NoActionBar">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.DISPATCH_TEST" />
+        <action android:name="com.seckawijoki.androidtest.DISPATCH_TEST" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
     <activity android:name=".activity.AmapTestActivity">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.AMAP_TEST" />
+        <action android:name="com.seckawijoki.androidtest.AMAP_TEST" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
     <activity android:name=".activity.SocketProgrammingActivity">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.SOCKET_PROGRAMMING" />
+        <action android:name="com.seckawijoki.androidtest.SOCKET_PROGRAMMING" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
     <activity android:name=".activity.AnimatorTestActivity">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.ANIMATOR_TEST" />
+        <action android:name="com.seckawijoki.androidtest.ANIMATOR_TEST" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -182,7 +182,7 @@
       android:label="@string/launch_mode_start_standard_launch_mode_activity"
       android:launchMode="standard">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.LAUNCH_MODE" />
+        <action android:name="com.seckawijoki.androidtest.LAUNCH_MODE" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -217,7 +217,7 @@
 
     <activity android:name=".activity.BaiduPushFlowActivity">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.BAIDU_PUSH_FLOW" />
+        <action android:name="com.seckawijoki.androidtest.BAIDU_PUSH_FLOW" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -226,14 +226,14 @@
       android:name=".activity.CollapsingToolbarActivity"
       android:theme="@style/Theme.AppCompat.NoActionBar">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.COLLAPSING_TOOLBAR" />
+        <action android:name="com.seckawijoki.androidtest.COLLAPSING_TOOLBAR" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
     <activity android:name=".activity.SingleChoiceRecyclerViewActivity">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.SINGLE_CHOICE_RECYCLER_VIEW" />
+        <action android:name="com.seckawijoki.androidtest.SINGLE_CHOICE_RECYCLER_VIEW" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -241,21 +241,21 @@
     <activity android:name=".mvp.example.MvpActivity" />
     <activity android:name=".activity.IntercommunicationActivity">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.INTERCOMMUNICATION" />
+        <action android:name="com.seckawijoki.androidtest.INTERCOMMUNICATION" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
     <activity android:name=".activity.DataBindingTestActivity">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.DATA_BINDING_TEST" />
+        <action android:name="com.seckawijoki.androidtest.DATA_BINDING_TEST" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
     <activity android:name=".activity.MyAndroidLibraryTestActivity">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.MY_ANDROID_LIBRARY_TEST" />
+        <action android:name="com.seckawijoki.androidtest.MY_ANDROID_LIBRARY_TEST" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -271,7 +271,7 @@
       android:permission="oem.permission.SENDMAIL"
       android:process=":remote">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.service.SOME_REMOTE_SERVICE" />
+        <action android:name="com.seckawijoki.androidtest.service.SOME_REMOTE_SERVICE" />
       </intent-filter>
     </service>
     <service
@@ -282,7 +282,7 @@
       android:name=".service.IntercommunicationService"
       android:exported="false">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.service.INTERCOMMUNICATION" />
+        <action android:name="com.seckawijoki.androidtest.service.INTERCOMMUNICATION" />
       </intent-filter>
     </service>
     <service
@@ -291,7 +291,7 @@
       android:exported="true"
       android:permission="@string/common_component_permission_name">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.service.MESSENGER_INTERCOMMUNICATION" />
+        <action android:name="com.seckawijoki.androidtest.service.MESSENGER_INTERCOMMUNICATION" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
@@ -304,7 +304,7 @@
       android:enabled="true"
       android:exported="false">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.receiver.WHETHER_IN_UI_THREAD" />
+        <action android:name="com.seckawijoki.androidtest.receiver.WHETHER_IN_UI_THREAD" />
       </intent-filter>
     </receiver>
     <receiver
@@ -313,7 +313,7 @@
       android:exported="true"
       android:permission="oem.permission.SENDMAIL">
       <intent-filter>
-        <action android:name="com.seckawijoki.android_test.receiver.INTERCOMMUNICATION" />
+        <action android:name="com.seckawijoki.androidtest.receiver.INTERCOMMUNICATION" />
 
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>

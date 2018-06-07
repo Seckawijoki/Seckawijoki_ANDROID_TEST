@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Seckawijoki_ANDROID_TEST.iml" filepath="$PROJECT_DIR$/Seckawijoki_ANDROID_TEST.iml" />
       <module fileurl="file://$PROJECT_DIR$/annotation/annotation.iml" filepath="$PROJECT_DIR$/annotation/annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jnilibrary/jnilibrary.iml" filepath="$PROJECT_DIR$/jnilibrary/jnilibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/processor/processor.iml" filepath="$PROJECT_DIR$/processor/processor.iml" />
     </modules>
   </component>

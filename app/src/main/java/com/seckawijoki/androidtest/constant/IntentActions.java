@@ -5,7 +5,7 @@ package com.seckawijoki.androidtest.constant;
  */
 
 public interface IntentActions {
-  String base = "com.seckawijoki.android_test.";
+  String base = "com.seckawijoki.androidtest.";
   String OLD_TEST = base + "OLD_TEST";
   String NAVIGATION_VIEW = base + "NAVIGATION_VIEW";
   String TOUCH_FOR_LARGENING = base + "TOUCH_FOR_LARGENING";

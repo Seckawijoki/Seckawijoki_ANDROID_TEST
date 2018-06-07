@@ -5,7 +5,7 @@ package com.seckawijoki.androidtest.constant;
  */
 
 public interface ServiceAction {
-  String base = "com.seckawijoki.android_test.service.";
+  String base = "com.seckawijoki.androidtest.service.";
   String INTERCOMMUNICATION = base + "INTERCOMMUNICATION";
   String MESSENGER_INTERCOMMUNICATION = base + "MESSENGER_INTERCOMMUNICATION";
   String SOME_REMOTE_SERVICE = base + "SOME_REMOTE_SERVICE";

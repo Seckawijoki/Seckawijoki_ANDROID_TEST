@@ -5,7 +5,7 @@ package com.seckawijoki.androidtest.constant;
  */
 
 public interface ReceiverAction {
-  String base = "com.seckawijoki.android_test.receiver.";
+  String base = "com.seckawijoki.androidtest.receiver.";
   String WHETHER_IN_UI_THREAD = base + "WHETHER_IN_UI_THREAD";
   String INTERCOMMUNICATION = base + "INTERCOMMUNICATION";
 }
