@@ -18,4 +18,5 @@ public class ImplicitNativeHelper {
   private static native String getAppKey();
   private static native void invokeJavaFromC();
   private static native String callFromMainLib();
+  public static native void zeroDivision();
 }

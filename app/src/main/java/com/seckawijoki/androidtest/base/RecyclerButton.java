@@ -28,6 +28,7 @@ public final class RecyclerButton extends RecyclerView.Adapter<RecyclerButton.Vi
   private RecyclerView rv;
   private String[] titles;
   private boolean debuggingLog = true;
+  private RecyclerButton(){}
 
   public static class Builder {
     private RecyclerButton instance = new RecyclerButton();

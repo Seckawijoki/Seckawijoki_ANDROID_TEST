@@ -18,12 +18,20 @@ extern "C"{
 JNIEXPORT jstring JNICALL
 Java_com_seckawijoki_androidtest_tool_ImplicitNativeHelper_getAppKey(JNIEnv *, jobject);
 /**
- * Class: com_seckawijoki_androidtest_tool_NativeHelper
+ * Class: com_seckawijoki_androidtest_tool_ImplicitNativeHelper
  * Method: getAppKey
  * Signature: ()V
  */
 JNIEXPORT void JNICALL
 Java_com_seckawijoki_androidtest_tool_ImplicitNativeHelper_invokeJavaFromC(JNIEnv *, jobject);
+/**
+ * Class: com_seckawijoki_androidtest_tool_ImplicitNativeHelper
+ * Method: zeroDivision
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL
+Java_com_seckawijoki_androidtest_tool_ImplicitNativeHelper_zeroDivision(JNIEnv *, jobject);
+
 
 #ifdef __cplusplus
 }

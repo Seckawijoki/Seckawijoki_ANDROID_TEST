@@ -23,3 +23,8 @@ Java_com_seckawijoki_androidtest_tool_ImplicitNativeHelper_invokeJavaFromC(JNIEn
     GetGreeting();
     SayHelloToJava();
 }
+JNIEXPORT void JNICALL
+Java_com_seckawijoki_androidtest_tool_ImplicitNativeHelper_zeroDivision(JNIEnv *env, jobject type) {
+    float a = 1.0;
+    a = a/0;
+}

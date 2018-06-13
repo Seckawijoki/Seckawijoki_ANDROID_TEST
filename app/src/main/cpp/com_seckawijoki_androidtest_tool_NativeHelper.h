@@ -25,6 +25,13 @@ Java_com_seckawijoki_androidtest_tool_NativeHelper_getAppKey(JNIEnv *, jobject);
  */
 JNIEXPORT void JNICALL
 Java_com_seckawijoki_androidtest_tool_NativeHelper_invokeJavaFromC(JNIEnv *, jobject);
+/**
+ * Class: com_seckawijoki_androidtest_tool_NativeHelper
+ * Method: zeroDivision
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL
+Java_com_seckawijoki_androidtest_tool_NativeHelper_zeroDivision(JNIEnv *, jobject);
 
 
 #ifdef __cplusplus

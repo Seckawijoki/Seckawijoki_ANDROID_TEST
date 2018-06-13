@@ -13,7 +13,9 @@ public class NativeHelper {
   public static void invokeNativeMethodFromApplication(){
 //    Log.d(TAG, "invokeNativeMethodFromApplication()\n: getAppKey() = " + getAppKey());
     invokeJavaFromC();
+    zeroDivision();
   }
-  private static native String getAppKey();
+  public static native String getAppKey();
   private static native void invokeJavaFromC();
+  public static native void zeroDivision();
 }

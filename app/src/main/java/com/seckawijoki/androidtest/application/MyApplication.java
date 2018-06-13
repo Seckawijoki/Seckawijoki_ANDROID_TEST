@@ -8,6 +8,7 @@ import com.seckawijoki.androidtest.tool.FruitAnnotationTool;
 import com.seckawijoki.androidtest.tool.ImplicitNativeHelper;
 import com.seckawijoki.androidtest.tool.NativeHelper;
 import com.seckawijoki.jnilibrary.NativeCalculators;
+import com.tencent.bugly.crashreport.CrashReport;
 
 /**
  * Created by 瑶琴频曲羽衣魂 on 2018/5/31 at 15:22 under Windows-10 Professional.
@@ -18,8 +19,12 @@ public class MyApplication extends Application {
   public void onCreate() {
     super.onCreate();
 //    FruitAnnotationTool.getInfo(Apple.class);
+    Log.i(TAG, "CrashReport::initCrashReport ");
+    //True for test
+    //    CrashReport.initCrashReport(getApplicationContext(), NativeHelper.getAppKey(), true);
+        CrashReport.initCrashReport(getApplicationContext());
 //    NativeHelper.invokeNativeMethodFromApplication();
-    ImplicitNativeHelper.invokeNativeMethodFromApplication();
-    NativeCalculators.add(2,3);
+//    ImplicitNativeHelper.invokeNativeMethodFromApplication();
+//    NativeCalculators.add(2,3);
   }
 }
