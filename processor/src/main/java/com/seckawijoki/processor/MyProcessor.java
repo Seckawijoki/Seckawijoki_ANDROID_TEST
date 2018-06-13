@@ -1,6 +1,5 @@
 package com.seckawijoki.processor;
 
-import java.util.LinkedHashSet;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;

@@ -22,6 +22,8 @@ import javax.lang.model.element.TypeElement;
  */
 @SupportedAnnotationTypes("com.seckawijoki.annotation.JavabeanPropertyMethod")
 @SupportedSourceVersion(SourceVersion.RELEASE_0)
+@SuppressWarnings("")
+@Deprecated
 public class JavabeanPropertyMethodProcessor extends AbstractProcessor {
   private Messager messager;
 
