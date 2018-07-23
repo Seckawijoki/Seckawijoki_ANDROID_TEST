@@ -31,6 +31,13 @@ Java_com_seckawijoki_androidtest_tool_ImplicitNativeHelper_invokeJavaFromC(JNIEn
  */
 JNIEXPORT void JNICALL
 Java_com_seckawijoki_androidtest_tool_ImplicitNativeHelper_zeroDivision(JNIEnv *, jobject);
+/**
+ * Class: org_appplay_lib_AppPlayNatives
+ * Method: nativeOnNetworkDisabled
+ * Signature: (I)V
+ */
+JNIEXPORT void JNICALL
+Java_org_appplay_lib_AppPlayNatives_nativeOnNetwork(JNIEnv *, jobject, jint);
 
 
 #ifdef __cplusplus

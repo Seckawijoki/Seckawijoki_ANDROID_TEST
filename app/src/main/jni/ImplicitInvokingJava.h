@@ -16,6 +16,7 @@ void InvokeJavaStaticMethod();
 void GetGreeting();
 void SayHelloToJava();
 
+
 #ifdef __cplusplus
 }
 #endif

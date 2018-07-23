@@ -44,19 +44,19 @@ android {
     productFlavors {
         demo {
             dimension "demo"
-            versionName "1.0.0-androidTest"
+            versionName "1.0.0"
         }
 
     }
-    sourceSets.main{
-            jniLibs.srcDirs = ['src/main/libs'] //set libs as .so's location instead of jniLibs
-            jni.srcDirs = [] //disable automatic ndk-build call with auto-generated Android.mk
-    }
+//    sourceSets.main{ // Ndk-build in batch script does not use the codes. It's for Android Studio inner build.
+//            jniLibs.srcDirs = ['src/main/libs'] //set libs as .so's location instead of jniLibs
+//            jni.srcDirs = [] //disable automatic ndk-build call with auto-generated Android.mk
+//    }
     buildTypes {
         release {
             minifyEnabled true
             multiDexEnabled = true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules2.pro'
         }
     }
     externalNativeBuild{

@@ -27,4 +27,5 @@ public interface IntentActions {
   String DATA_BINDING_TEST = base + "DATA_BINDING_TEST";
   String MY_ANDROID_LIBRARY_TEST = base + "MY_ANDROID_LIBRARY_TEST";
   String BUGLY_TEST = base + "BUGLY_TEST";
+  String NETWORK_STATE_MONITOR = base + "NETWORK_STATE_MONITOR";
 }

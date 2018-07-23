@@ -11,8 +11,9 @@
         <item>SingleChoiceRecyclerView</item>
         <item>Activity与Service通信</item>
         <item>DataBindingTest</item>
-        <!--<item>我的Android Library测试</item>-->
         <item>Tecent Bugly</item>
+        <item>NetworkStateMonitor</item>
+        <!--<item>我的Android Library测试</item>-->
         <!--<item>Socket编程</item>-->
         <!--<item>百度推流SDK</item>-->
     </string-array>

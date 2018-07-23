@@ -8,4 +8,5 @@ public interface ReceiverAction {
   String base = "com.seckawijoki.androidtest.receiver.";
   String WHETHER_IN_UI_THREAD = base + "WHETHER_IN_UI_THREAD";
   String INTERCOMMUNICATION = base + "INTERCOMMUNICATION";
+  String NETWORK_MONITOR = base + "NETWORK_MONITOR";
 }

@@ -4,6 +4,7 @@
 #include <jni.h>
 #include "com_seckawijoki_androidtest_tool_ImplicitNativeHelper.h"
 #include "ImplicitInvokingJava.h"
+#include "AppPlayNetworkObserver.h"
 JNIEnv *jniEnv;
 
 JNIEXPORT jstring JNICALL
@@ -15,9 +16,7 @@ Java_com_seckawijoki_androidtest_tool_ImplicitNativeHelper_getAppKey(JNIEnv *env
 
 JNIEXPORT void JNICALL
 Java_com_seckawijoki_androidtest_tool_ImplicitNativeHelper_invokeJavaFromC(JNIEnv *env, jobject type) {
-    if (jniEnv == NULL){
-        jniEnv = env;
-    }
+    jniEnv = env;
     InvokeJavaMethod();
     InvokeJavaStaticMethod();
     GetGreeting();
@@ -27,4 +26,10 @@ JNIEXPORT void JNICALL
 Java_com_seckawijoki_androidtest_tool_ImplicitNativeHelper_zeroDivision(JNIEnv *env, jobject type) {
     float a = 1.0;
     a = a/0;
+}
+JNIEXPORT void JNICALL
+Java_org_appplay_lib_AppPlayNatives_nativeOnNetwork(JNIEnv *env, jobject type, jint networkCallbackType) {
+    jniEnv = env;
+    
+    OnNetworkCallback(networkCallbackType);
 }

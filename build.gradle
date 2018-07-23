@@ -8,6 +8,9 @@ buildscript {
             name 'Google'
         }
         google()
+        flatDir {
+            dir files('libs') // Used for ndk-build in batch script.
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.3'
