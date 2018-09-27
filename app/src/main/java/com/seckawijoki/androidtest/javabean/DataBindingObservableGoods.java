@@ -1,16 +1,13 @@
 package com.seckawijoki.androidtest.javabean;
 
-import android.databinding.BaseObservable;
-import android.databinding.Bindable;
-import android.databinding.ObservableField;
-import android.databinding.ObservableFloat;
 
 import java.util.Observable;
 
 /**
  * Created by 瑶琴频曲羽衣魂 on 2018/5/29 at 20:52 under Windows-10 Professional.
  */
-public class DataBindingObservableGoods extends BaseObservable {
+public class DataBindingObservableGoods {
+  /*
   @Bindable
   public ObservableField<String> name;
   private  ObservableField<String> details;
@@ -45,5 +42,5 @@ public class DataBindingObservableGoods extends BaseObservable {
   public ObservableFloat getPrice() {
     return price;
   }
-
+*/
 }

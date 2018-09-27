@@ -1,12 +1,10 @@
 package com.seckawijoki.androidtest.javabean;
 
-import android.databinding.BaseObservable;
-import android.databinding.Bindable;
-
 /**
  * Created by 瑶琴频曲羽衣魂 on 2018/5/30 at 10:42 under Windows-10 Professional.
  */
-public class DataBindingJavabean extends BaseObservable{
+public class DataBindingJavabean{
+  /*
   private String privateField = "private";
   String defaultField = "default";
   protected String protectedField = "protected";
@@ -55,4 +53,5 @@ public class DataBindingJavabean extends BaseObservable{
     notifyPropertyChanged(com.seckawijoki.androidtest.BR.publicField);
     return this;
   }
+  */
 }

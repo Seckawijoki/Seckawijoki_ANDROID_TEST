@@ -1,39 +1,6 @@
 package com.seckawijoki.androidtest.activity;
 
-import android.databinding.BaseObservable;
-import android.databinding.BindingConversion;
-import android.databinding.DataBindingUtil;
-import android.databinding.Observable;
-import android.databinding.ObservableArrayList;
-import android.databinding.ObservableArrayMap;
-import android.databinding.ObservableList;
-import android.databinding.ViewDataBinding;
-import android.databinding.ViewStubProxy;
-import android.databinding.adapters.ViewStubBindingAdapter;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.util.Log;
-import android.view.View;
-import android.view.ViewStub;
-
-import com.seckawijoki.androidtest.R;
-import com.seckawijoki.androidtest.databinding.DataBindingTestActivityBinding;
-import com.seckawijoki.androidtest.fragment.DataBindingTestFragment;
-import com.seckawijoki.androidtest.javabean.DataBindingGoods;
-import com.seckawijoki.androidtest.javabean.DataBindingJavabean;
-import com.seckawijoki.androidtest.javabean.DataBindingObservableGoods;
-import com.seckawijoki.androidtest.javabean.DataBindingObservableJavabean;
-import com.seckawijoki.androidtest.javabean.DataBindingUser;
-import com.seckawijoki.androidtest.util.ToastUtil;
-
-import java.util.Random;
 
 /**
  * Created by 瑶琴频曲羽衣魂 on 2018/5/29 at 10:52 under Windows-10 Professional.
@@ -48,8 +15,8 @@ import java.util.Random;
  * 8.ViewStub用法。
  * 9.Fragment下的DataBinding的使用方法
  */
-public class DataBindingTestActivity extends AppCompatActivity implements View.OnClickListener {
-  private static final String TAG = "DataBindingTestActivity";
+public class DataBindingTestActivity extends AppCompatActivity {
+  /*private static final String TAG = "DataBindingTestActivity";
   private DataBindingTestActivityBinding binding;
   private DataBindingUser user;
   private DataBindingGoods goods;
@@ -60,22 +27,22 @@ public class DataBindingTestActivity extends AppCompatActivity implements View.O
   private DataBindingJavabean javabean;
   private DataBindingObservableJavabean observableJavabean;
 
-  /**
+  *//**
    * 1.基本用法。
    * 布局文件转化DataBinding模式，声明data、variable、import等。
    *  Activity文件使用自生成类XXXBinding传入Javabean类。
-   */
+   *//*
   private void dataBindingSimpleTest() {
     user = new DataBindingUser("ThinkPad-E431", "34563456");
     binding.setUserInfo(user);
   }
 
-  /**
+  *//**
    * 2.观察者模式更新UI。
    * 使Javabean继承{@link android.databinding.BaseObservable}，
    * 在相应的setter方法下，调用{@link android.databinding.BaseObservable#notifyPropertyChanged(int)}
    * 更新某个成员变量绑定的UI控件，或者调用{@link BaseObservable#notifyChange()}更新所有成员变量的UI。
-   */
+   *//*
   private void dataBindingNotificationTest() {
     goods = new DataBindingGoods("code", "hi", 24);
     binding.setGoods(goods);
@@ -97,20 +64,20 @@ public class DataBindingTestActivity extends AppCompatActivity implements View.O
     goods.addOnPropertyChangedCallback(onPropertyChangedCallback);
   }
 
-  /**
+  *//**
    * 3.使用Observable类。
    * 可自动更新。
-   */
+   *//*
   private void dataBindingObservableFieldTest() {
     goods2 = new DataBindingObservableGoods("code", "hi", 24);
     binding.setObservableGoods(goods2);
     binding.setGoodsHandler(new GoodsHandler());
   }
 
-  /**
+  *//**
    * 4.Observable集合类用法。
    *
-   */
+   *//*
   private void dataBindingObservableCollectionTest() {
     observableArrayMap = new ObservableArrayMap<>();
     observableList = new ObservableArrayList<>();
@@ -124,44 +91,44 @@ public class DataBindingTestActivity extends AppCompatActivity implements View.O
     binding.setKey("name");
   }
 
-  /**
+  *//**
    * 5.双向绑定。
    * UI和Javabean的更新会互相通知。
-   */
+   *//*
   private void doubleDataBinding() {
     //为TextView的android:text=“@{userInfo.name}”
     //而TextView的android:text=“@={userInfo.name}”
     //@的后面多了一个赋值符号=
   }
 
-  /**
+  *//**
    * 6.绑定事件。
    * 声明一个公共类，里面包含的公共方法，即用来更新UI。
-   */
+   *//*
   private void dataBindingEventTest() {
     binding.setUserPresenter(new DataBindingUserPresenter());
   }
 
-  /**
+  *//**
    * 7.布局文件的include用法。
    * 在include标签下通过bind传递variable变量。两个布局文件下声明的变量要相同。
-   */
+   *//*
   private void dataBindingViewInclude(){
 
   }
 
-  /**
+  *//**
    * 8.ViewStub用法。
    * 同样在viewStub标签下，通过bind绑定相应的变量。
-   */
+   *//*
   private void dataBindingViewStub() {
     ViewStub viewStub = binding.viewStubDataBindingTest.getViewStub();
     View view = viewStub.inflate();
   }
 
-  /**
+  *//**
    * 9.Fragment下的DataBinding的使用方法
-   */
+   *//*
   private void dataBindingJavabeanAccessSpecifiers(){
     javabean = new DataBindingJavabean();
     observableJavabean = new DataBindingObservableJavabean();
@@ -295,5 +262,5 @@ public class DataBindingTestActivity extends AppCompatActivity implements View.O
       return new ColorDrawable(Color.parseColor("#3F51B5"));
     }
     return new ColorDrawable(Color.parseColor("#344567"));
-  }
+  }*/
 }
