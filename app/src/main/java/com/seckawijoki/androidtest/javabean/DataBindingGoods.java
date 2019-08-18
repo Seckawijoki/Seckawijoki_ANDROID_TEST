@@ -1,14 +1,11 @@
 package com.seckawijoki.androidtest.javabean;
 
-import android.databinding.BaseObservable;
-import android.databinding.Bindable;
-
-import com.seckawijoki.androidtest.BR;
 
 /**
  * Created by 瑶琴频曲羽衣魂 on 2018/5/29 at 20:17 under Windows-10 Professional.
  */
-public class DataBindingGoods extends BaseObservable {
+public class DataBindingGoods {
+  /*
   //如果是 public 修饰符，则可以直接在成员变量上方加上 @Bindable 注解
   @Bindable
   public String name;
@@ -46,5 +43,5 @@ public class DataBindingGoods extends BaseObservable {
   public float getPrice() {
     return price;
   }
-
+*/
 }

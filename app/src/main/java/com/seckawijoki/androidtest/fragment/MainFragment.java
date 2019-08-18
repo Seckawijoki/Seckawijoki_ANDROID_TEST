@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.seckawijoki.androidtest.R;
 import com.seckawijoki.androidtest.base.RecyclerButton;
 import com.seckawijoki.androidtest.constant.IntentActions;
+import org.appplay.lib.NetworkMonitorService;
 import com.seckawijoki.androidtest.util.ToastUtil;
 
 /**
@@ -35,6 +36,7 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
   @Override
   public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
+    getActivity().startService(new Intent(getActivity(), NetworkMonitorService.class));
     RecyclerView rv = view.findViewById(R.id.recycler_view_main);
     new RecyclerButton.Builder(getActivity())
             .setTitleRes(R.array.array_main_activity_names)
@@ -107,6 +109,9 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
       case Activities.BUGLY_TEST:
         startActivity(IntentActions.BUGLY_TEST);
         break;
+      case Activities.NETWORK_STATE_MONITOR:
+        startActivity(IntentActions.NETWORK_STATE_MONITOR);
+        break;
       case Activities.DESIGN_PATTERN_COMMAND_DRAW:
         startActivity(IntentActions.DESIGN_PATTERN_COMMAND_DRAW);
         break;
@@ -126,7 +131,8 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
     int COMMUNICATION_BETWEEN_ACTIVITY_AND_SERVICE = 9;
     int DATA_BINDING_TEST = 10;
     int BUGLY_TEST = 11;
-    int DESIGN_PATTERN_COMMAND_DRAW = 12;
+    int NETWORK_STATE_MONITOR = 12;
+    int DESIGN_PATTERN_COMMAND_DRAW = 13;
     int SOCKET_PROGRAMMING = 98;
     int BAIDU_PUSH_FLOW = 99;
     int MY_ANDROID_LIBRARY_TEST = 100;

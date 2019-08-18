@@ -120,9 +120,12 @@ public class IntercommunicationActivity extends AbsActivity
    * （这个谁就是上述的接收者Messenger）
    */
   private void communicateWithMessenger(){
-    receiverMessenger = new Messenger(new Handler(msg -> {
-      Log.d(TAG, "Received data from remote service: msg.obj = " + msg.obj.toString());
-      return false;
+    receiverMessenger = new Messenger(new Handler(new Handler.Callback() {
+      @Override
+      public boolean handleMessage(Message msg) {
+        Log.d(TAG, "Received data from remote service: msg.obj = " + msg.obj.toString());
+        return false;
+      }
     }));
     serviceConnectionWithMessenger = new ServiceConnection() {
       @Override

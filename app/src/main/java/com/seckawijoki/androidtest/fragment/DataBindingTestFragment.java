@@ -1,7 +1,5 @@
 package com.seckawijoki.androidtest.fragment;
 
-import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,13 +11,13 @@ import android.view.ViewGroup;
 
 import com.seckawijoki.androidtest.R;
 import com.seckawijoki.androidtest.activity.DataBindingTestActivity;
-import com.seckawijoki.androidtest.databinding.DataBindingTestFragmentBinding;
 import com.seckawijoki.androidtest.javabean.DataBindingUser;
 
 /**
  * Created by 瑶琴频曲羽衣魂 on 2018/5/29 at 23:59 under Windows-10 Professional.
  */
 public class DataBindingTestFragment extends Fragment {
+  /*
   private static final String TAG = "DataBindingTestFragment";
   private DataBindingTestFragmentBinding binding;
 
@@ -57,5 +55,5 @@ public class DataBindingTestFragment extends Fragment {
     }
     return this;
   }
-
+*/
 }

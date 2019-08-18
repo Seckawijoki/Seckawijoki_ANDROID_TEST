@@ -1,15 +1,12 @@
 package com.seckawijoki.androidtest.javabean;
 
-import android.databinding.BaseObservable;
-import android.databinding.Bindable;
-import android.databinding.ObservableField;
-
 import java.util.Observable;
 
 /**
  * Created by 瑶琴频曲羽衣魂 on 2018/5/30 at 10:45 under Windows-10 Professional.
  */
-public class DataBindingObservableJavabean extends BaseObservable{
+public class DataBindingObservableJavabean{
+  /*
   private ObservableField<String> privateField = new ObservableField<>();
   @Bindable
   ObservableField<String> defaultField = new ObservableField<>();
@@ -55,5 +52,5 @@ public class DataBindingObservableJavabean extends BaseObservable{
     this.publicField.set(publicField);
     return this;
   }
-
+*/
 }

@@ -18,6 +18,6 @@ public class InvokedJava {
     return "Hello, JNI!";
   }
   public void sayHelloToJava(String greeting){
-    Log.d(TAG, "sayHelloToJava()\n: greeting = " + greeting);
+    Log.d(TAG, "sayHelloToJava(): greeting = " + greeting);
   }
 }

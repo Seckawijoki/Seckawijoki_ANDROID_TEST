@@ -13,7 +13,7 @@ jmethodID javaStaticMethod;
 jmethodID getGreeting;
 jmethodID sayHelloToJava;
 const int SUCCESSFUL = 1;
-const char* const TAG = "JNIMsg";
+const char* const TAG = "ImplicitInvokingJava.c";
 void DeleteStaticMethods(){
     (*jniEnv)->DeleteGlobalRef(jniEnv, javaStaticMethod);
     (*jniEnv)->DeleteGlobalRef(jniEnv, getGreeting);

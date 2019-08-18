@@ -8,7 +8,7 @@ import android.util.Log;
 public class ImplicitNativeHelper {
   private static final String TAG = "ImplicitNativeHelper";
   static {
-    System.loadLibrary("implicitnativehelper-lib");
+    System.loadLibrary(TAG);
   }
   public static void invokeNativeMethodFromApplication(){
     Log.d(TAG, "getAppKey() = " + getAppKey());
@@ -19,4 +19,5 @@ public class ImplicitNativeHelper {
   private static native void invokeJavaFromC();
   private static native String callFromMainLib();
   public static native void zeroDivision();
+
 }

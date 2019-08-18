@@ -1,16 +1,18 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
+        mavenCentral()
         jcenter()
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
-        google()
+        flatDir {
+            dir files('libs') // Used for ndk-build in batch script.
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.3'
+        classpath 'com.android.tools.build:gradle:2.2.0'
         //加入Tinker的插件 里面包含gradle脚本
 //        classpath "com.tencent.tinker:tinker-patch-gradle-plugin:1.9.1"
         // 配置自动上传符号表插件，注：为了能快速并准确地定位用户APP发生Crash的代码位置，Bugly使用符号表对APP发生Crash的程序堆栈进行解析和还原
@@ -20,7 +22,6 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-
 allprojects {
     repositories {
         jcenter()
@@ -33,7 +34,7 @@ allprojects {
         }
     }
 }
-
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+

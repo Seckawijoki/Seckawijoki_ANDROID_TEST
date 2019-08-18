@@ -13,6 +13,8 @@
         <item>DataBindingTest</item>
         <!--<item>我的Android Library测试</item>-->
         <item>Tecent Bugly</item>
+        <item>NetworkStateMonitor</item>
+        <!--<item>我的Android Library测试</item>-->
         <item>命令模式实践：绘制线段</item>
         <!--<item>Socket编程</item>-->
         <!--<item>百度推流SDK</item>-->

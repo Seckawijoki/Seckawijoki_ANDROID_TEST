@@ -1,9 +1,11 @@
 package com.seckawijoki.androidtest.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import org.appplay.lib.NetworkMonitorService;
 import com.seckawijoki.androidtest.R;
 import com.seckawijoki.androidtest.fragment.MainFragment;
 import com.seckawijoki.androidtest.util.ActivityUtil;
@@ -23,5 +25,11 @@ public class MainActivity extends AppCompatActivity {
       fragment = MainFragment.newInstance();
       ActivityUtil.addFragmentToActivity(getSupportFragmentManager(), fragment, R.id.layout_main_fragment);
     }
+  }
+
+  @Override
+  protected void onDestroy() {
+    super.onDestroy();
+    stopService(new Intent(this, NetworkMonitorService.class));
   }
 }

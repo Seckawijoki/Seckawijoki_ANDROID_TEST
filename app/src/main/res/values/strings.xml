@@ -90,6 +90,12 @@
   <string name="data_binding_test_change_public">改变public</string>
   <string name="data_binding_test_format_goods_price">%.2f</string>
 
+  <!--NetworkStateMonitorActivity -->
+  <string name="network_state_monitor">NetworkStateMonitor</string>
+  <string name="network_state_monitor_connectivity_manager">ConnectivityManager</string>
+  <string name="network_state_monitor_network_info">NetworkInfo</string>
+  <string name="network_state_monitor_network_state">NetworkState</string>
+
   <string name="design_pattern_command_draw_red">红色</string>
   <string name="design_pattern_command_draw_green">绿色</string>
   <string name="design_pattern_command_draw_blue">蓝色</string>
@@ -97,6 +103,7 @@
   <string name="design_pattern_command_draw_circle_brush">圆形笔刷</string>
   <string name="design_pattern_command_draw_redo">重做</string>
   <string name="design_pattern_command_draw_undo">撤销</string>
+
 
   <!-- MyEditText -->
   <string name="my_edit_text_clear">清除</string>
