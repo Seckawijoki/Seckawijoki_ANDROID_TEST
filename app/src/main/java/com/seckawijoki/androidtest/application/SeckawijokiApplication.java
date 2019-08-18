@@ -1,13 +1,17 @@
 package com.seckawijoki.androidtest.application;
 
 import android.app.Application;
+import android.content.Intent;
+import android.os.StrictMode;
 import android.util.Log;
 
 import com.seckawijoki.androidtest.javabean.Apple;
 import com.seckawijoki.androidtest.tool.FruitAnnotationTool;
 import com.seckawijoki.androidtest.tool.ImplicitNativeHelper;
 import com.seckawijoki.androidtest.tool.NativeHelper;
-import com.seckawijoki.jnilibrary.NativeCalculators;
+//import com.seckawijoki.jnilibrary.NativeCalculators;
+
+import org.appplay.lib.NetworkMonitorService;
 //import com.tencent.bugly.crashreport.CrashReport;
 
 /**
