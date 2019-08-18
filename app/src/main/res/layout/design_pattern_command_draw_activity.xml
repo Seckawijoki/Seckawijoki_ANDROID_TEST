@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:orientation="vertical"
+  android:layout_height="match_parent">
+  <com.seckawijoki.androidtest.design_pattern.command.DrawCanvas
+    android:id="@+id/design_pattern_command_draw_canvas"
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_height="0dp" />
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <Button
+        android:id="@+id/design_pattern_command_draw_btn_red"
+        android:text="@string/design_pattern_command_draw_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <Button
+        android:id="@+id/design_pattern_command_draw_btn_green"
+        android:text="@string/design_pattern_command_draw_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <Button
+        android:id="@+id/design_pattern_command_draw_btn_blue"
+        android:text="@string/design_pattern_command_draw_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <Button
+        android:id="@+id/design_pattern_command_draw_btn_normal_brush"
+        android:text="@string/design_pattern_command_draw_normal_brush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <Button
+        android:id="@+id/design_pattern_command_draw_btn_circle_brush"
+        android:text="@string/design_pattern_command_draw_circle_brush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <Button
+        android:id="@+id/design_pattern_command_draw_btn_undo"
+        android:text="@string/design_pattern_command_draw_undo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+      <Button
+        android:id="@+id/design_pattern_command_draw_btn_redo"
+        android:text="@string/design_pattern_command_draw_redo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

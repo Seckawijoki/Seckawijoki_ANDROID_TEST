@@ -42,11 +42,11 @@ public class CheckboxAdapter extends RecyclerView.Adapter<CheckboxAdapter.ViewHo
   }
 
   @Override
-  public void onBindViewHolder(final ViewHolder holder, final int position) {
+  public void onBindViewHolder(final ViewHolder holder, int position) {
     Log.d(TAG, "onBindViewHolder(): currentPosition = " + currentPosition);
     Log.d(TAG, "onBindViewHolder(): position = " + position);
-    final int p = position;
-    holder.chb.setText(TAG + position);
+    final int p = holder.getAdapterPosition();
+    holder.chb.setText(TAG + p);
     holder.chb.setChecked(currentPosition == position);
     View.OnClickListener listener1 = new View.OnClickListener() {
       @Override

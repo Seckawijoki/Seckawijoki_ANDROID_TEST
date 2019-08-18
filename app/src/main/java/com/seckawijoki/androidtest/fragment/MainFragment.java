@@ -107,6 +107,9 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
       case Activities.BUGLY_TEST:
         startActivity(IntentActions.BUGLY_TEST);
         break;
+      case Activities.DESIGN_PATTERN_COMMAND_DRAW:
+        startActivity(IntentActions.DESIGN_PATTERN_COMMAND_DRAW);
+        break;
     }
   }
 
@@ -123,6 +126,7 @@ public class MainFragment extends Fragment implements RecyclerButton.OnRecyclerB
     int COMMUNICATION_BETWEEN_ACTIVITY_AND_SERVICE = 9;
     int DATA_BINDING_TEST = 10;
     int BUGLY_TEST = 11;
+    int DESIGN_PATTERN_COMMAND_DRAW = 12;
     int SOCKET_PROGRAMMING = 98;
     int BAIDU_PUSH_FLOW = 99;
     int MY_ANDROID_LIBRARY_TEST = 100;

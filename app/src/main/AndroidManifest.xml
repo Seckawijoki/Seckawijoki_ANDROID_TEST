@@ -266,13 +266,20 @@
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </activity>
-      <activity android:name=".activity.BuglyTestActivity">
-          <intent-filter>
-              <action android:name="com.seckawijoki.androidtest.BUGLY_TEST"/>
+    <activity android:name=".activity.BuglyTestActivity">
+        <intent-filter>
+            <action android:name="com.seckawijoki.androidtest.BUGLY_TEST"/>
 
-              <category android:name="android.intent.category.DEFAULT"/>
-          </intent-filter>
-      </activity>
+            <category android:name="android.intent.category.DEFAULT"/>
+        </intent-filter>
+    </activity>
+    <activity android:name=".design_pattern.command.DrawActivity">
+        <intent-filter>
+            <action android:name="com.seckawijoki.androidtest.DESIGN_PATTERN_COMMAND_DRAW"/>
+
+            <category android:name="android.intent.category.DEFAULT"/>
+        </intent-filter>
+    </activity>
 
     <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
     <!-- Services -->

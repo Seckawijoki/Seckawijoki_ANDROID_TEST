@@ -1,6 +1,7 @@
 package com.seckawijoki.androidtest.widget;
 
 import android.content.Context;
+import android.support.annotation.Keep;
 import android.util.AttributeSet;
 
 /**
@@ -19,6 +20,7 @@ public class MyTestView extends android.support.v7.widget.AppCompatButton{
         super(context, attrs, defStyleAttr);
     }
 
+    @Keep
     public void setIntegerText(int i){
         setText(i+"");
     }
